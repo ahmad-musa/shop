@@ -15,7 +15,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$catName = $_POST['catName'];
 		
-		$insertCat = $cat->catInsert($catName);
+		$updateCat = $cat->catUpdate($catName, $id);
 	}
 ?>
 
@@ -25,8 +25,8 @@
                <div class="block copyblock"> 
 
             <?php
-                if (isset($insertCat)) {
-                    echo $insertCat;
+                if (isset($updateCat)) {
+                    echo $updateCat;
                 }
             ?>
 
@@ -36,7 +36,7 @@
                     while ($result = $getCat->fetch_assoc()){
             ?>
 
-                 <form action="catedit.php" method="post">
+                 <form action="" method="post">
                     <table class="form">					
                         <tr>
                             <td>
