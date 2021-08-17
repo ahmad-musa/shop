@@ -59,6 +59,7 @@
             $catName = $this->fm->validation($catName);
             
             $catName = mysqli_real_escape_string($this->db->link, $catName);
+
             $id = mysqli_real_escape_string($this->db->link, $id);
 
             if (empty($catName)){
@@ -83,6 +84,27 @@
                     return $msg;
 
                 }
+            }
+        }
+
+
+        public function delCatById($id){
+            
+            $id = mysqli_real_escape_string($this->db->link, $id);
+            
+            $query = "DELETE FROM tbl_category WHERE catId = '$id'";
+            $result = $this->db->delete($query);
+           
+            if ($result) {
+
+                $msg= "<span class = 'success'> Category deleted successfully! </span>";
+                return $msg;
+
+            } else {
+
+                $msg= "<span class = 'error'> Category not deleted! </span>";
+                return $msg;
+
             }
         }
     
