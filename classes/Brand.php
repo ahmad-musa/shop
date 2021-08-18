@@ -42,5 +42,14 @@
 
         }
 
+
+        public function getAllBrand(){
+            $query = "SELECT * FROM tbl_brand ORDER BY brandId DESC";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+
+
     }
 ?>
