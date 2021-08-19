@@ -4,10 +4,10 @@
 
 <?php
 	$brand = new Brand();
-	// if (isset($_GET['delbrand'])) {
-	// 	$id = $_GET['delbrand'];
-	// 	$delBrand = $brand -> delBrandById($id);
-	// }
+	if (isset($_GET['delbrand'])) {
+		$id = $_GET['delbrand'];
+		$delBrand = $brand -> delBrandById($id);
+	}
 ?>
 
         <div class="grid_10">
@@ -15,11 +15,11 @@
                 <h2>Brand List</h2>
                 <div class="block">      
 					
-				<!-- <?php
+				 <?php
 					if (isset($delBrand)){
 						echo $delBrand;
 					}
-				?> -->
+				?> 
 
 
 
