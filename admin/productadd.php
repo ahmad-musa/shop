@@ -14,7 +14,16 @@
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Add New Product</h2>
-        <div class="block">               
+        <div class="block">       
+            
+        <?php
+            if (isset($insertProduct)) {
+                echo $insertProduct;
+            }
+        ?>
+
+<!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit voluptate ad maiores eligendi nobis, iusto dicta animi labore eum quo ipsa quos voluptatem aliquid velit? Neque beatae corrupti perferendis ad consequuntur quod sapiente minus nobis! -->
+
          <form action="" method="post" enctype="multipart/form-data">
             <table class="form">
                

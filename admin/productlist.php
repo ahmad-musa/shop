@@ -1,5 +1,8 @@
 ﻿<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
+<?php include '../classes/Product.php';?>
+
+
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Post List</h2>
@@ -7,10 +10,14 @@
             <table class="data display datatable" id="example">
 			<thead>
 				<tr>
-					<th>Post Title</th>
+					<th>SL No.</th>
+					<th>Product Name</th>
+					<th>Category Name</th>
+					<th>Brand</th>
 					<th>Description</th>
-					<th>Category</th>
+					<th>Price</th>
 					<th>Image</th>
+					<th>Type</th>
 					<th>Action</th>
 				</tr>
 			</thead>
