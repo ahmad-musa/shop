@@ -2,7 +2,14 @@
 <?php include 'inc/sidebar.php';?>
 <?php include '../classes/Category.php' ;?>
 <?php include '../classes/Brand.php' ;?>
+<?php include '../classes/Product.php' ;?>
 
+<?php
+     $pd = new Product();
+     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+         $insertProduct = $pd->productInsert($_POST, $_FILES);
+     }
+?>
 
 <div class="grid_10">
     <div class="box round first grid">
