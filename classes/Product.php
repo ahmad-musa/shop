@@ -108,4 +108,11 @@
             return $result;
         }
 
+
+    public function getProById($id){
+        $query = "SELECT * FROM tbl_product WHERE productId = '$id' ORDER BY productId DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
     }

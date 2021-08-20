@@ -8,6 +8,7 @@
 	$fm = new Format();
 ?>
 
+
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Post List</h2>
@@ -55,7 +56,11 @@
 						?> 
 					</td>
 	
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
+					<td>
+						<a href="productedit.php?proid=<?php echo $result['productId']; ?>">Edit</a> 
+						|| 
+						<a onclick="return confirm('Are you sure to delete?')" href="?delpro=<?php echo $result['productId']; ?>">Delete</a>
+					</td>
 				</tr>
 		<?php } } ?>
 
