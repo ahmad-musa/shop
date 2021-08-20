@@ -87,9 +87,12 @@
 
                 }
             }
+        }
 
-             
-
+        public function getAllProduct(){
+            $query = "SELECT * FROM tbl_product ORDER BY productId DESC";
+            $result = $this->db->select($query);
+            return $result;
         }
 
     }
