@@ -39,7 +39,7 @@
 				<tr class="odd gradeX">
 					<td> <?php echo $i ?> </td>
 					<td> <?php echo $result['productName'] ?> </td>
-					<td> <?php echo $result['categoryName'] ?> </td>
+					<td> <?php echo $result['catName'] ?> </td>
 					<td> <?php echo $result['brandName'] ?> </td>
 					<td> <?php echo $fm->textShorten($result['body'],50); ?> </td>
 					<td> $ <?php echo $result['price'] ?> </td>
