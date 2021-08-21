@@ -119,7 +119,7 @@
                         <label>Upload Image</label>
                     </td>
                     <td>
-                        <img src="<?php echo $value['image']; ?>" alt="img" width="150px" height ="80px"> <br>
+                        <img src="<?php echo $value['image']; ?>" alt="image" width="60px" height ="40px"> <br>
                         <input name="image" type="file"/>
                     </td>
                 </tr>
@@ -148,7 +148,7 @@
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input type="submit" name="submit" Value="Update" />
                     </td>
                 </tr>
             </table>
