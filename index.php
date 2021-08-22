@@ -24,11 +24,11 @@
 
 				<div class="grid_1_of_4 images_1_of_4">
 
-					 <a href="details.php?proid=<?php echo $result['productId'] ;?>"><img src="admin/<?php echo $result['image'] ;?>" alt="" /></a>
+					 <a href="details.php?proid=<?php echo $result['productId'] ;?>"><img src="admin/<?php echo $result['image'] ;?>" class="img_cng" alt="" /></a>
 
 					 <h2> <?php echo $result['productName'] ;?> </h2>
 
-					 <p><?php echo $fm->textShorten($result['body'], 70) ;?> </p>
+					 <p><?php echo $fm->textShorten($result['body'], 60) ;?> </p>
 
 					 <p><span class="price">$<?php echo $result['price'] ;?></span></p>
 
