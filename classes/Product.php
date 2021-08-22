@@ -271,6 +271,12 @@
         return $result;
     }
     
+    public function getNewProduct(){
+        $query = "SELECT * FROM tbl_product ORDER BY productId DESC LIMIT 4";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    
     
     
     

@@ -912,6 +912,7 @@ button.grey:hover,
 }
 
 .images_1_of_4 img {
+	height: 235px;
 	max-width: 100%;
 }
 
