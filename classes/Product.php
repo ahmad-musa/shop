@@ -264,7 +264,11 @@
 
     
     
-    
+    public function getFeaturedProduct(){
+        $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId DESC LIMIT 4";
+        $result = $this->db->select($query);
+        return $result;
+    }
     
     
     
