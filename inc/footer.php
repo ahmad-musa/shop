@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div class="copy_right">
-				<p> <a href="http://github.com/ahmad-musa" target= "_blank" >Ahmad Musa</a> &copy; All rights Reseverd </p>
+				<p> <a href="http://github.com/ahmad-musa" target= "_blank" >Pushtalk</a> &copy; All rights Reseverd </p>
 		   </div>
      </div>
     </div>
