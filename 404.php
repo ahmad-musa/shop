@@ -1,5 +1,20 @@
 <?php include 'inc/header.php' ;?>
 
+<style>
+    .notfound{ }
+    .notfound h2{
+        font-size: 100px;
+        line-height: 130px;
+        text-align: center;
+    }
+    .notfound h2 span{
+        display: block;
+        color: red;
+        font-size: 180px;
+     }
+
+</style>
+
  <div class="main">
     <div class="content">
     	

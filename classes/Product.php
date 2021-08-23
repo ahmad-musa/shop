@@ -277,7 +277,15 @@
         return $result;
     }
     
-    
+    public function getSingleProduct($id){
+        $query = "SELECT p.*, c.catName, b.brandName 
+        FROM tbl_product AS p, tbl_category AS c, tbl_brand AS b
+        WHERE p.catId = c.catId AND p.brandId = b.brandId AND p.productId = '$id' ";
+
+        $result = $this->db->select($query);
+        return $result;
+
+    }
     
     
     
@@ -288,4 +296,3 @@
     }
 
 ?>
-
