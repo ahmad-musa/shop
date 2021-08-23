@@ -1,5 +1,23 @@
 <?php include 'inc/header.php';?>
 
+<?php
+
+    if (!isset($_GET['proid']) || $_GET['proid'] == NULL) {
+        echo "<script> window.location = '404.php'; </script>";
+    } else {
+        $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['proid']);
+    }
+
+    
+    // $brand = new Brand();
+    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	// 	$brandName = $_POST['brandName'];
+		
+	// 	$updateBrand = $brand->brandUpdate($brandName, $id);
+	// }
+?>
+
+
  <div class="main">
     <div class="content">
     	<div class="section group">
