@@ -47,6 +47,14 @@
                             <input type="submit" class="buysubmit" name="submit" value="Buy Now" />
                         </form>
                     </div>
+                    <span class="error">
+                        <?php 
+                            if(isset($addCart)){
+                                echo $addCart;
+                            } 
+                        ?>
+                    </span>
+
                 </div>
 
                 <div class="product-desc">

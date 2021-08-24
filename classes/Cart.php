@@ -30,7 +30,15 @@
             $price       = $result['price'];
             $image       = $result['image'];
 
-            $query = "INSERT INTO tbl_cart (sId, productId,productName, price, quantity, image) 
+            $chquery     = "SELECT * FROM tbl_cart WHERE productId = '$productId' AND sId = '$sId' ";
+            $getPro    = $this->db->select($chquery);
+
+            if ($getPro) {
+                $msg = "Product Already Added!";
+                return $msg;
+            } else {
+
+                $query = "INSERT INTO tbl_cart (sId, productId, productName, price, quantity, image) 
                 VALUES('$sId', '$productId', '$productName', '$price', '$quantity', '$image')";
 
                 $inserted_row = $this->db->insert($query);
@@ -43,6 +51,7 @@
                     header("Location:404.php");
 
                 }
+            }
         }
 
         public function getCartProduct(){

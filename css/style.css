@@ -127,6 +127,16 @@ table {
 }
 
 /* start editing from here */
+.success {
+	font-size: 18px;
+	color: rgb(46, 255, 5);
+}
+
+.error {
+	font-size: 18px;
+	color: rgb(253, 34, 5);
+}
+
 a {
 	text-decoration: none;
 }
@@ -220,7 +230,7 @@ body {
 }
 
 .header_top {
-	padding: 20px 0;
+	padding: 15px 0 0 0;
 }
 
 .logo {
@@ -228,11 +238,15 @@ body {
 	width: 33%;
 }
 
+.logo_img{
+	height: 80px;
+}
+
 /**** Header Top Right ****/
 .header_top_right {
 	float: left;
 	width: 67%;
-	margin-top: 35px;
+	margin-top: 15px;
 }
 
 .search_box {

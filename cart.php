@@ -8,8 +8,8 @@
 						<table class="tblone">
 							<tr>
 								<th width="5%">SL</th>
-								<th width="25%">Product Name</th>
-								<th width="10%">Image</th>
+								<th width="20%">Product Name</th>
+								<th width="15%">Image</th>
 								<th width="15%">Price</th>
 								<th width="15%">Quantity</th>
 								<th width="15%">Total Price</th>
@@ -32,7 +32,7 @@
 								<td>Tk. <?php echo $result['price'];?> </td>
 								<td>
 									<form action="" method="post">
-										<input type="number" name="quantity" value="1"/>
+										<input type="number" name="quantity" value="<?php echo $result['quantity'];?>"/>
 										<input type="submit" name="submit" value="Update"/>
 									</form>
 								</td>
@@ -59,11 +59,11 @@
 							</tr>
 							<tr>
 								<th>Grand Total :</th>
-								<td>TK. <?php 
+								<b> <td>TK.  <?php 
 									$vat	= $sum*0.1;
 									$gtotal = $sum + $vat;
 								echo $gtotal ;
-								?> </td>
+								?> </td></b>
 							</tr>
 					   </table>
 					</div>

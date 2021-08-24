@@ -47,7 +47,7 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="img/livelogo.png" alt="Logo" />
+                    <img class="logo" src="img/livelogo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
 					<h1>Pushtalk</h1>
