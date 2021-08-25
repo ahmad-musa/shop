@@ -61,7 +61,58 @@
             return $result;
         }
         
-        
+        public function updateCartQuantity($cartId, $quantity){
+            $cartId = mysqli_real_escape_string($this->db->link, $cartId);
+            $quantity = mysqli_real_escape_string($this->db->link, $quantity);
+
+
+            $query = "UPDATE tbl_cart SET quantity = '$quantity' WHERE cartId= '$cartId' ";
+
+            $updated_row = $this->db->update($query);
+
+                if ($updated_row) {
+
+                    $msg= "<span class = 'success'> Quantity updated successfully! </span>";
+                    return $msg;
+
+                } else {
+
+                    $msg= "<span class = 'error'> Quantity not updated! </span>";
+                    return $msg;
+
+                }
+            
+        }
+
+        public function delProductByCart($delId){
+            $delId  = mysqli_real_escape_string($this->db->link, $delId);
+            
+            $query  = "DELETE FROM tbl_cart WHERE cartId = '$delId'";
+            $result = $this->db->delete($query);
+           
+            if ($result) {
+
+                echo "<script> window.Location= 'cart.php'; </script>";
+
+            } else {
+
+                $msg= "<span class = 'error'> Product Not Deleted! </span>";
+                return $msg;
+
+            }
+        }
+
+        public function checkCartTable(){
+            $sId = session_id();
+            $query = "SELECT * FROM tbl_cart WHERE sId = '$sId'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+
+
+
+
     }
 
 ?>

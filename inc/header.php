@@ -27,6 +27,7 @@
 <title>Pushtalk</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="./images/logo.png"/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="css/menu.css" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquerymain.js"></script>
@@ -56,14 +57,26 @@
 			  <div class="header_top_right">
 			    <div class="search_box">
 				    <form>
-				    	<input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
+				    	<input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}">
+						<input type="submit" value="SEARCH">
 				    </form>
 			    </div>
 			    <div class="shopping_cart">
 					<div class="cart">
 						<a href="#" title="View my shopping cart" rel="nofollow">
 								<span class="cart_title">Cart</span>
-								<span class="no_product">(empty)</span>
+								<span class="no_product">
+									<?php
+										$getData = $ct->checkCartTable(); 
+										if ($getData) {
+											$sum  = Session::get("sum");
+											$qty  = Session::get("qty");
+											echo "Tk: ".$sum." || Q: ".$qty;
+										} else {
+											echo "(Empty)";
+										}
+								?>
+								</span>
 							</a>
 						</div>
 			      </div>

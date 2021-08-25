@@ -1,3 +1,11 @@
+/* :root{
+	 --color1 : #70389C;
+	--color1_1 : #602D8D; 
+	--color1 : #70389C;
+	--color1_1 : #602D8D;
+	var(--font-red)
+} */
+
 html,
 body,
 div,
@@ -269,6 +277,11 @@ body {
 	margin: 0;
 }
 
+.search_box input[type="text"]:focus{
+	outline: 1px dotted var(--color1);
+	color: var(--color1);
+}
+
 .search_box input[type="submit"] {
 	border: none;
 	cursor: pointer;
@@ -277,10 +290,12 @@ body {
 	padding: 10px 15px;
 	height: 36px;
 	margin: 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#70389C), to(#602D8D));
-	background: -moz-linear-gradient(top, #70389C, #602D8D);
-	background: -o-linear-gradient(top, #70389C, #602D8D);
-	background: -ms-linear-gradient(top, #70389C, #602D8D);
+	background: linear-gradient(linear, left top, left bottom, from(var(--color1)), to(var(--color1_1)));
+	background: -webkit-gradient(linear, left top, left bottom, from (var(--color1)), to(var(--color1_1)));
+	background: -moz-linear-gradient(top, var(--color1), var(--color1_1));
+	background: -o-linear-gradient(top, var(--color1), var(--color1_1));
+	background: -ms-linear-gradient(top, var(--color1), var(--color1_1));
+	background: var(--color1);
 	-webkit-transition: all .9s;
 	-moz-transition: all .9s;
 	-o-transition: all .9s;
@@ -352,7 +367,7 @@ input[type="number"] {
 }
 
 .buysubmit {
-	background: #602d8d url("../images/large-button-overlay.png") repeat scroll 0 0;
+	background: var(--color1_1) url("../images/large-button-overlay.png") repeat scroll 0 0;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
 	color: #fff;
@@ -369,14 +384,14 @@ input[type="number"] {
 	max-height: 400px;
 	width: 95px;
 	z-index: 1;
-	background: #70389C;
+	background: var(--color1);
 }
 
-.login {
+/* .login {
 	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
 	border: 1px solid #cecece;
 	box-sizing: border-box;
-	color: #444;
+	color: #444; 
 	display: block;
 	float: left;
 	font-size: 27px;
@@ -386,8 +401,29 @@ input[type="number"] {
 	width: 144px;
 }
 
+.login:hover{
+	background: var(--color1);
+	color: #ffffff;
+} */
+
 .login a {
-	color: #333;
+	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
+	border: 1px solid #cecece;
+	box-sizing: border-box;
+	/* color: #444; */
+	display: block;
+	float: left;
+	font-size: 23px;
+	/* height: 38px; */
+	margin-left: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	/* width: 144px; */
+}
+
+.login a:hover{
+	background: var(--color1);
+	color: #ffffff;
 }
 
 /*** Login ***/
@@ -486,7 +522,7 @@ p.terms {
 p.terms a,
 p.note a {
 	text-decoration: underline;
-	color: #7C2DC5;
+	color: var(--color1_1);
 }
 
 p.terms a:hover,
@@ -662,7 +698,7 @@ button.grey:hover,
 	max-height: 400px;
 	width: 95px;
 	z-index: 1;
-	background: #70389C;
+	background: var(--color1);
 }
 
 .wrapper-dropdown.active .languges {
@@ -670,7 +706,7 @@ button.grey:hover,
 	max-height: 400px;
 	width: 135px;
 	z-index: 11;
-	background: #70389C;
+	background: var(--color1);
 }
 
 .header_bottom {
@@ -767,7 +803,7 @@ button.grey:hover,
 }
 
 .list_2_of_1 h2 {
-	color: #CC3636;
+	color: var(--font-red);
 	font-size: 1.2em;
 	font-family: 'Monda', sans-serif;
 	font-weight: normal;
@@ -792,7 +828,7 @@ button.grey:hover,
 	font-size: 0.8em;
 	font-family: Arial, "Helvetica Neue", "Helvetica", Tahoma, Verdana, sans-serif;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	background: #602D8D url(../images/large-button-overlay.png);
+	background: var(--color1_1) url(../images/large-button-overlay.png);
 	color: #fff;
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	-moz-border-radius: 5px;
@@ -802,7 +838,7 @@ button.grey:hover,
 
 .list_2_of_1 .button a:hover {
 	border: 1px solid #4D00A0;
-	background: #70389C;
+	background: var(--color1);
 	text-decoration: none;
 }
 
@@ -845,7 +881,7 @@ button.grey:hover,
 .heading h3 {
 	font-family: 'Monda', sans-serif;
 	font-size: 22px;
-	color: #602D8D;
+	color: var(--color1_1);
 	text-transform: uppercase;
 }
 
@@ -902,7 +938,7 @@ button.grey:hover,
 
 .page-no li a:hover,
 .page-no li.active {
-	color: #602D8D;
+	color: var(--color1_1);
 	text-decoration: underline;
 }
 
@@ -946,7 +982,7 @@ button.grey:hover,
 }
 
 .images_1_of_4 h2 {
-	color: #CC3636;
+	color: var(--font-red);
 	font-family: 'Monda', sans-serif;
 	font-size: 0.9em;
 	font-weight: normal;
@@ -968,7 +1004,7 @@ button.grey:hover,
 .images_1_of_4 p span.price {
 	font-size: 18px;
 	font-family: 'Monda', sans-serif;
-	color: #CC3636;
+	color: var(--font-red);
 	margin-left: 15px;
 }
 
@@ -1009,8 +1045,8 @@ button.grey:hover,
 }
 
 .images_1_of_4 .button a:hover {
-	color: #70389C;
-	background: #E8E8E8;
+	color: #E8E8E8;
+	background: var(--color1) ;
 }
 
 .images_1_of_4 .button span img {
@@ -1235,7 +1271,7 @@ button.grey:hover,
 
 .back-links p a:hover,
 .back-links p a:active {
-	color: #70389C;
+	color: var(--color1);
 }
 
 .image {
@@ -1311,7 +1347,7 @@ button.grey:hover,
 .span_3_of_2 h2 {
 	font-family: 'Monda', sans-serif;
 	font-size: 1.1em;
-	color: #CC3636;
+	color: var(--font-red);
 	font-weight: normal;
 	margin-top: 0px;
 	text-transform: uppercase;
@@ -1335,7 +1371,7 @@ button.grey:hover,
 .price p span {
 	font-size: 1.5em;
 	font-family: 'Monda', sans-serif;
-	color: #CC3636;
+	color: var(--font-red);
 }
 
 .available {
@@ -1411,7 +1447,7 @@ button.grey:hover,
 .product-desc h2,
 .product-tags h2 {
 	padding: 8px 20px;
-	background: #602D8D;
+	background: var(--color1_1);
 	border: 1px solid #EBE8E8;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -1515,7 +1551,7 @@ button.grey:hover,
 
 .span_3_of_1 li a:hover {
 	background: url(../images/drop_arrow-hover.png) no-repeat 5px 11px;
-	color: #602D8D;
+	color: var(--color1_1);
 }
 
 .span_3_of_2 .button {
@@ -1683,7 +1719,7 @@ button.grey:hover,
 }
 
 .year p {
-	color: #70389C;
+	color: var(--color1);
 	font-size: 0.95em;
 }
 
@@ -1698,7 +1734,7 @@ button.grey:hover,
 .span_1_of_3 .list li a {
 	font-size: 0.82em;
 	padding: 0.35em 1.2em;
-	color: #602D8D;
+	color: var(--color1_1);
 	background: url(../images/drop_arrow-hover.png) no-repeat 0px 10px;
 	display: block;
 }
@@ -1753,7 +1789,7 @@ button.grey:hover,
 }
 
 .questions h4 {
-	color: #70389C;
+	color: var(--color1);
 	font-size: 15px;
 	margin-bottom: 5px;
 	font-weight: normal;
