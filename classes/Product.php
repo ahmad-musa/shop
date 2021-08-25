@@ -288,7 +288,41 @@
     }
     
     
+    public function latestFromApple(){
+        $query = "SELECT p.*, b.brandName 
+                FROM tbl_product AS p, tbl_brand AS b 
+                WHERE p.brandId = '3' AND p.brandId = b.brandId 
+                ORDER BY p.productId DESC LIMIT 1";
+        $result = $this->db->select($query);
+        return $result;
+    }
     
+    public function latestFromSamsung(){
+        $query = "SELECT p.*, b.brandName 
+                FROM tbl_product AS p, tbl_brand AS b 
+                WHERE p.brandId = '2' AND p.brandId = b.brandId 
+                ORDER BY p.productId DESC LIMIT 1";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    
+    public function latestFromAcer(){
+        $query = "SELECT p.*, b.brandName 
+                FROM tbl_product AS p, tbl_brand AS b 
+                WHERE p.brandId = '1' AND p.brandId = b.brandId 
+                ORDER BY p.productId DESC LIMIT 1";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    
+    public function latestFromCanon(){
+        $query = "SELECT p.*, b.brandName 
+                FROM tbl_product AS p, tbl_brand AS b 
+                WHERE p.brandId = '4' AND p.brandId = b.brandId 
+                ORDER BY p.productId DESC LIMIT 1";
+        $result = $this->db->select($query);
+        return $result;
+    }
     
     
     

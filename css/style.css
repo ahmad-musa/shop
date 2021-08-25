@@ -312,7 +312,7 @@ body {
 
 .shopping_cart {
 	float: left;
-	width: 202px;
+	width: 215px;
 	position: relative;
 	margin-left: 15px;
 	padding: 0 0 0 46px;
@@ -2077,7 +2077,7 @@ table.tblone img {
 	}
 
 	.shopping_cart {
-		width: 170px;
+		width: 215px;
 	}
 
 	.shopping_cart,

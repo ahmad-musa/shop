@@ -72,8 +72,9 @@
 
                 if ($updated_row) {
 
-                    $msg= "<span class = 'success'> Quantity updated successfully! </span>";
-                    return $msg;
+                    header("Location:cart.php");
+                    // $msg= "<span class = 'success'> Quantity updated successfully! </span>";
+                    // return $msg;
 
                 } else {
 

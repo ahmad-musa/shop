@@ -20,6 +20,12 @@
 	}
 ?>
 
+<?php
+	if (!isset($_GET['id'])) {
+		echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
+	}
+?>
+
  <div class="main">
     <div class="content">
     	<div class="cartoption">		
@@ -50,7 +56,7 @@
 								$getPro = $ct->getCartProduct();
 								if ($getPro) {
 									$i   = 0;
-									$sum = 0;
+									$sum   = 0;
 									$qty = 0;
 									while ($result = $getPro->fetch_assoc()) {
 										$i++;
@@ -68,9 +74,11 @@
 										<input type="submit" name="submit" value="Update"/>
 									</form>
 								</td>
-								<td>Tk. <?php 
+								<td>Tk. 
+									<?php 
 								$total = $result['price'] * $result['quantity'];
-								echo $total;?> </td>
+								echo $total;?> 
+								</td>
 								<td><a onclick="return confirm('Are you sure to Delete?');" href="?delpro=<?php echo $result['cartId'] ?>">X</a></td>
 							</tr>
 
@@ -101,16 +109,18 @@
 							</tr>
 							<tr>
 								<th>Grand Total :</th>
-								<b> <td>TK.  <?php 
+								<b> <td>TK.  
+									<?php 
 									$vat	= $sum*0.1;
 									$gtotal = $sum + $vat;
-								echo $gtotal ;
+									echo $gtotal ;
 								?> </td></b>
 							</tr>
 					   </table>
 
 						<?php 								} else {
-							echo "Cart Empty!";
+							header("Location:index.php");
+							// echo "Cart Empty! Please Continue Your Purchase";
 						}
 						?>
 
