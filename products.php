@@ -59,7 +59,7 @@
 				     <div class="button"><span><a href="details.php" class="details">Details</a></span></div>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<a href="details-2.php"><img src="images/feature-pic3.jpg" alt="" /></a>
+					<a href="details-2.php"><img src="images/new-pic3.jpg" alt="" /></a>
 					 <h2>Lorem Ipsum is simply </h2>
 					 <p><span class="price">Tk 428.02</span></p>
 				     <div class="button"><span><a href="details.php" class="details">Details</a></span></div>

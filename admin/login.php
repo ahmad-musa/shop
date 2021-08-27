@@ -41,7 +41,7 @@
 			</div>
 		</form><!-- form -->
 		<div class="button">
-			<a href="#">TaNiMu</a>
+			<a href="#">Pushtalk</a>
 		</div><!-- button -->
 	</section><!-- content -->
 </div><!-- container -->

@@ -35,15 +35,19 @@ class Adminlogin{
 
             $result = $this->db->select($query);
             if ($result != false){
+
                 $value = $result->fetch_assoc();
                 Session::set("adminlogin", true);
-                Session::set("adminId", $value['adminId']);
+                Session::set("adminId",   $value['adminId']);
                 Session::set("adminUser", $value['adminUser']);
                 Session::set("adminName", $value['adminName']);
                 header("Location:dashboard.php");
+
             } else {
+
                 $loginmsg = "Username or Password not matched!";
                 return $loginmsg;
+                
             }
         }
     }
