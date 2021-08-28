@@ -18,34 +18,34 @@
 
         public function customerRegistration($data)
         {
-            $name       = $this->fm->validation($data['name']);
-            $name       = mysqli_real_escape_string($this->db->link, $data['name']);
+            $name     = $this->fm->validation($data['name']);
+            $name     = mysqli_real_escape_string($this->db->link, $data['name']);
         
-            $address    = $this->fm->validation($data['address']);
-            $address    = mysqli_real_escape_string($this->db->link, $data['address']);
+            $address  = $this->fm->validation($data['address']);
+            $address  = mysqli_real_escape_string($this->db->link, $data['address']);
         
-            $city       = $this->fm->validation($data['city']);
-            $city       = mysqli_real_escape_string($this->db->link, $data['city']);
+            $city     = $this->fm->validation($data['city']);
+            $city     = mysqli_real_escape_string($this->db->link, $data['city']);
         
-            $country    = $this->fm->validation($data['country']);
-            $country    = mysqli_real_escape_string($this->db->link, $data['country']);
+            $country  = $this->fm->validation($data['country']);
+            $country  = mysqli_real_escape_string($this->db->link, $data['country']);
         
-            $zip        = $this->fm->validation($data['zip']);
-            $zip        = mysqli_real_escape_string($this->db->link, $data['zip']);
+            $zip      = $this->fm->validation($data['zip']);
+            $zip      = mysqli_real_escape_string($this->db->link, $data['zip']);
         
-            $phone      = $this->fm->validation($data['phone']);
-            $phone      = mysqli_real_escape_string($this->db->link, $data['phone']);
+            $phone    = $this->fm->validation($data['phone']);
+            $phone    = mysqli_real_escape_string($this->db->link, $data['phone']);
         
-            $email       = $this->fm->validation($data['email']);
-            $mail       = mysqli_real_escape_string($this->db->link, $data['email']);
+            $email    = $this->fm->validation($data['email']);
+            $email    = mysqli_real_escape_string($this->db->link, $data['email']);
         
-            $pass       = $this->fm->validation($data['pass']);
-            $pass       = mysqli_real_escape_string($this->db->link, md5($data['pass']));
+            $pass     = $this->fm->validation($data['pass']);
+            $pass     = mysqli_real_escape_string($this->db->link, md5($data['pass']));
 
 
             if ($name == "" || $address == "" || $city == "" || $country == "" || $zip == "" || $phone == "" || $email == "" || $pass == "" )
             {
-                $msg = "<span class = 'error'> Field must not be empty! </span>";
+                $msg  = "<span class = 'error'> Field must not be empty! </span>";
                 return $msg;
             }
 
@@ -54,7 +54,7 @@
 
             if ($mailchk != false) {
 
-                $msg = "<span class = 'error'> Email already exist! </span>";
+                $msg  = "<span class = 'error'> Email already exist! </span>";
                 return $msg;
 
             } else {
