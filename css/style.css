@@ -445,26 +445,26 @@ input[type="number"] {
 	width: 712px;
 }
 
-.register_account form input[type="text"],
-.register_account form select {
+.register_account form input{
 	font-size: 12px;
-	color: #B3B1B1;
+	color: #242424;
 	padding: 8px;
 	outline: none;
 	margin: 5px 0;
 	width: 340px;
 }
 
-.register_account form select {
-	width: 360px;
-	color: #666;
+.register_account form input:focus{
+	color: var(--color1);
+	outline: 1px solid var(--color1);
 }
 
-.register_account form input[type="text"].code {
+
+.register_account form input .code {
 	width: 15%;
 }
 
-.register_account form input[type="text"].number {
+.register_account form input .number {
 	width: 69.8%;
 }
 
