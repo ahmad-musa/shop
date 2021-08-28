@@ -12,6 +12,7 @@
 	$db = new Database();
     $fm = new Format();
     $pd = new Product();
+    $cat = new Category();
     $ct = new Cart();
 ?>
 

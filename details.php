@@ -68,8 +68,21 @@
             <div class="rightsidebar span_3_of_1">
                 <h2>CATEGORIES</h2>
                 <ul>
-                    <li><a href="productbycat.php">Academic</a></li>
-                    <li><a href="productbycat.php">Adventure</a></li>
+
+                    <?php 
+                        $getCat = $cat->getAllCat(); 
+                        if ($getCat) {
+                            while ($result = $getCat->fetch_assoc()) {  
+                    ?>
+
+                    <li><a href="productbycat.php?catId=<?php echo $result['catId'];?>">
+                        <?php echo $result['catName'];?> 
+                    </a></li>
+
+                         
+                    <?php } } ?>
+
+                    <!-- <li><a href="productbycat.php">Adventure</a></li>
                     <li><a href="productbycat.php">Biography</a></li>
                     <li><a href="productbycat.php">Foreign</a></li>
                     <li><a href="productbycat.php">Horror</a></li>
@@ -79,7 +92,7 @@
                     <li><a href="productbycat.php">Poetry</a></li>
                     <li><a href="productbycat.php">Short Story</a></li>
                     <li><a href="productbycat.php">Thriller</a></li>
-                    <li><a href="productbycat.php">Others</a></li>
+                    <li><a href="productbycat.php">Others</a></li> -->
                 </ul>
 
             </div>

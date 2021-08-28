@@ -325,6 +325,13 @@
     }
     
     
+    public function productByCat($id){
+        $catId     = mysqli_real_escape_string($this->db->link, $id);
+        $query  = "SELECT * FROM tbl_product WHERE catId = '$catId' ";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
     
     
     }

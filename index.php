@@ -63,8 +63,10 @@
 
                 <p><span class="price">Tk <?php echo $result['price'] ;?></span></p>
 
-                <div class="button"><span><a href="details.php?proid=<?php echo $result['productId'] ;?>"
-                            class="details">Details</a></span></div>
+                <div class="button"> <span> 
+                    <a href="details.php?proid=<?php echo $result['productId'] ;?>"
+                      class="details">Details</a>
+                    </span> </div>
             </div>
 
             <?php } }?>
