@@ -1,11 +1,24 @@
 <?php include 'inc/header.php';?>
 
+<?php 
+	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
+		$custLogin = $cmr->customerLogin($_POST);
+	}
+?>
+
 <div class="main">
     <div class="content">
         <div class="login_panel">
+
+			<?php 
+				if (isset($custLogin)) {
+				echo $custLogin;
+				}
+			?>
+
             <h3> Existing Customers </h3>
             <p> Sign in with the form below. </p>
-            <form action="hello" method="post">
+            <form action="#" method="post">
 
                 <input name="email" type="email" placeholder="Email" class="field">
 
@@ -19,7 +32,7 @@
                		</div>
             	</div>
 			  </div>
-			  
+
             </form>
 
             
@@ -36,7 +49,7 @@
 			if (isset($customerReg)) {
 				echo $customerReg;
 			}
-		?>
+			?>
             <h3>Register New Account</h3>
             <form action="#" method="post">
                 <table>
