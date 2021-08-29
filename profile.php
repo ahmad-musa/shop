@@ -25,7 +25,7 @@
         <div class="section group">
 
         <?php 
-            $id = Session::get("cuslogin");
+            $id = Session::get("cmrId");
             $getdata = $cmr->getCustomerData($id);
             if ($getdata) {
                 while ($result = $getdata->fetch_assoc()) {
