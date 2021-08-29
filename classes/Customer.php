@@ -101,7 +101,7 @@
                 Session::set("cuslogin", true);
                 Session::set("cmrId", $value['id']);
                 Session::set("cmrName", $value['name']);
-                header("Location:order.php");
+                header("Location:cart.php");
             } else {
                 $msg  = "<span class = 'error'> Email or Password not matched! </span>";
                 return $msg;
@@ -110,7 +110,11 @@
         }
 
 
-
+        public function getCustomerData($id){
+            $query = "SELECT * FROM tbl_customer WHERE Id = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
 
 
 
