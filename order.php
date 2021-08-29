@@ -1,5 +1,12 @@
 <?php include 'inc/header.php' ;?>
 
+<?php 
+    $login = Session::get("cuslogin");
+    if ($login == false) {
+        header("Location:login.php");
+    }
+?>
+
 <style>
     .notfound{ }
     .notfound h2{
