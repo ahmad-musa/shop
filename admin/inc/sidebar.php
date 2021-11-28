@@ -29,10 +29,10 @@
                         <li><a href="catlist.php">Category List</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Brand Option</a>
+                <li><a class="menuitem">Publication Option</a>
                     <ul class="submenu">
-                        <li><a href="brandadd.php">Add Brand</a> </li>
-                        <li><a href="brandlist.php">Brand List</a> </li>
+                        <li><a href="brandadd.php">Add Publication</a> </li>
+                        <li><a href="brandlist.php">Publication List</a> </li>
                     </ul>
                 </li>
                 <li><a class="menuitem">Product Option</a>

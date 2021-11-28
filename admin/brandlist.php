@@ -12,7 +12,7 @@
 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Brand List</h2>
+                <h2>Publication List</h2>
                 <div class="block">      
 					
 				 <?php
@@ -27,7 +27,7 @@
 					<thead>
 						<tr>
 							<th>Serial No.</th>
-							<th>Brand Name</th>
+							<th>Publication Name</th>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -43,7 +43,9 @@
 						<tr class="odd gradeX">
 							<td><?php echo $i; ?></td>
 							<td><?php echo $result['brandName']; ?></td>
-							<td><a href="brandedit.php?brandid=<?php echo $result['brandId']; ?>"> Edit </a> || <a onclick="return confirm('Are you sure to delete?')" href="?delbrand=<?php echo $result['brandId']; ?>"> Delete </a></td>
+							<td>
+								<a class="edit" href="brandedit.php?brandid=<?php echo $result['brandId']; ?>"> Edit </a> || 
+								<a class="del" onclick="return confirm('Are you sure to delete?')" href="?delbrand=<?php echo $result['brandId']; ?>"> Delete </a></td>
 						</tr>
 						
 						<?php  }	} ?>

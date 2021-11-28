@@ -22,7 +22,7 @@
             $brandName = mysqli_real_escape_string($this->db->link, $brandName);
 
             if (empty($brandName)){
-                $msg = "<span class = 'error'> Brand field must not be empty! </span>";
+                $msg = "<span class = 'error'> Publisher field must not be empty! </span>";
                 return $msg;
 
             } else {
@@ -31,12 +31,12 @@
                 $brandinsert = $this->db->insert($query);
                
                 if ($brandinsert) {
-                    $msg= "<span class = 'success'> Brand inserted successfully! </span>";
+                    $msg= "<span class = 'success'> Publisher inserted successfully! </span>";
                     return $msg;
 
                 } else {
 
-                    $msg= "<span class = 'error'> Brand not inserted! </span>";
+                    $msg= "<span class = 'error'> Publisher not inserted! </span>";
                     return $msg;
                 }
             }
@@ -68,7 +68,7 @@
 
             if (empty($brandName)){
 
-                $msg = "<span class = 'error'> Brand Name field must not be empty! </span>";
+                $msg = "<span class = 'error'> Publisher Name field must not be empty! </span>";
                 return $msg;
 
             } else {
@@ -81,12 +81,12 @@
 
                 if ($updated_row) {
 
-                    $msg= "<span class = 'success'> Brand Name updated successfully! </span>";
+                    $msg= "<span class = 'success'> Publisher Name updated successfully! </span>";
                     return $msg;
 
                 } else {
 
-                    $msg= "<span class = 'error'> Brand Name not updated! </span>";
+                    $msg= "<span class = 'error'> Publisher Name not updated! </span>";
                     return $msg;
 
                 }
@@ -103,12 +103,12 @@
            
             if ($result) {
 
-                $msg= "<span class = 'success'> Brand Name deleted successfully! </span>";
+                $msg= "<span class = 'success'> Publisher Name deleted successfully! </span>";
                 return $msg;
 
             } else {
 
-                $msg= "<span class = 'error'> Brand Name not deleted! </span>";
+                $msg= "<span class = 'error'> Publisher Name not deleted! </span>";
                 return $msg;
 
             }

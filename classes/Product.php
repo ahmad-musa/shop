@@ -327,10 +327,27 @@
     
     public function productByCat($id){
         $catId     = mysqli_real_escape_string($this->db->link, $id);
-        $query  = "SELECT * FROM tbl_product WHERE catId = '$catId' ";
+        // $catName   = mysqli_real_escape_string($this->db->link, $id);
+
+        $query  = "SELECT tbl_category.catName, tbl_product.* FROM tbl_product, tbl_category WHERE tbl_product.catId = tbl_category.catId AND tbl_product.catId = '$catId' ";
         $result = $this->db->select($query);
         return $result;
     }
+
+
+    // public function getCatNameById($id){
+    //     $query = "SELECT tbl_category.catName, tbl_product.* FROM tbl_category, tbl_product WHERE tbl_product.catId = tbl_category.catId AND tbl_category.catId = '$id' ";
+    //     $result = $this->db->select($query);
+    //     return $result;
+    // }
+
+    // public function countProductFromCat($id){
+    //     $query = "SELECT COUNT(catName) FROM tbl_category WHERE catId = '$id'";
+    //     $result = $this->db->select($query);
+    //     return $result;
+    // }
+
+
 
     
     

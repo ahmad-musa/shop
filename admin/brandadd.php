@@ -13,7 +13,7 @@
 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Add New Brand</h2>
+                <h2>Add New Publication</h2>
                <div class="block copyblock"> 
 
             <?php
@@ -26,7 +26,7 @@
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" name="brandName" placeholder="Enter Brand Name..." class="medium" />
+                                <input type="text" name="brandName" placeholder="Enter Publication Name..." class="medium" />
                             </td>
                         </tr>
 						<tr> 

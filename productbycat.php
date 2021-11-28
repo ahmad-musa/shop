@@ -11,9 +11,23 @@
  <div class="main">
     <div class="content">
     	<div class="content_top">
+		
     		<div class="heading">
-    		<!-- <h3><?php echo $result['catName'];?></h3> -->
-    		</div>
+
+			<!-- newly added -->
+			<?php 
+				$productbycat = $pd->productByCat($id); 
+				if ($productbycat) {
+					while ($result = $productbycat->fetch_assoc()) {
+			?>
+
+    		<h3> <?php echo $result['catName'];?> </h3>
+
+			<?php 	} }?>  <!-- newly added --> 
+    		</div> 
+
+			
+
     		<div class="clear"></div>
     	</div>
 
@@ -31,6 +45,8 @@
 							src="admin/<?php echo $result['image'] ;?>" class="img_cng" alt="" /></a>
 
 					<h2> <?php echo $result['productName'] ;?> </h2>
+
+					<p><?php echo $fm->textShorten($result['body'], 60) ;?> </p>
 
 					<p><span class="price">Tk <?php echo $result['price'] ;?></span></p>
 

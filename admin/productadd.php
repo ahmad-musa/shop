@@ -13,7 +13,7 @@
 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Add New Product</h2>
+        <h2>Add New Book</h2>
         <div class="block">       
             
         <?php
@@ -32,7 +32,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input type="text" name="productName" placeholder="Enter Product Name..." class="medium" />
+                        <input type="text" name="productName" placeholder="Enter Book Name..." class="medium" />
                     </td>
                 </tr>
 				<tr>
@@ -58,11 +58,11 @@
                 </tr>
 				<tr>
                     <td>
-                        <label>Brand</label>
+                        <label>Publisher</label>
                     </td>
                     <td>
                         <select id="select" name="brandId">
-                            <option>Select Brand</option>
+                            <option>Select Publisher</option>
                             <?php
                                 $brand = new Brand();
                                 $getBrand = $brand->getAllBrand();

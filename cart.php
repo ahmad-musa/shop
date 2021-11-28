@@ -44,7 +44,7 @@
 						<table class="tblone">
 							<tr>
 								<th width="5%">SL</th>
-								<th width="20%">Product Name</th>
+								<th width="20%">Book Name</th>
 								<th width="15%">Image</th>
 								<th width="15%">Price</th>
 								<th width="15%">Quantity</th>

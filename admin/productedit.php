@@ -21,7 +21,7 @@
 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Update Product</h2>
+        <h2>Update Book</h2>
         <div class="block">       
             
         <?php
@@ -74,11 +74,11 @@
                 </tr>
 				<tr>
                     <td>
-                        <label>Brand</label>
+                        <label>Publication</label>
                     </td>
                     <td>
                         <select id="select" name="brandId">
-                            <option>Select Brand</option>
+                            <option>Select Publication</option>
                             <?php
                                 $brand = new Brand();
                                 $getBrand = $brand->getAllBrand();
@@ -119,7 +119,7 @@
                         <label>Upload Image</label>
                     </td>
                     <td>
-                        <img src="<?php echo $value['image']; ?>" alt="image" width="60px" height ="40px"> <br>
+                        <img src="<?php echo $value['image']; ?>" alt="image" width="45px" height ="50px"> <br>
                         <input name="image" type="file"/>
                     </td>
                 </tr>

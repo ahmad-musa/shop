@@ -21,8 +21,8 @@
 					<td>Title of Slider</td>
 					<td><img src="" height="40px" width="60px"/></td>				
 				<td>
-					<a href="">Edit</a> || 
-					<a onclick="return confirm('Are you sure to Delete!');" >Delete</a> 
+					<a class="edit" href="">Edit</a> || 
+					<a class="del" onclick="return confirm('Are you sure to Delete!');" >Delete</a> 
 				</td>
 					</tr>	
 			</tbody>

@@ -18,7 +18,7 @@
 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Post List</h2>
+        <h2>Book List</h2>
         <div class="block">  
 
 		<?php
@@ -30,10 +30,10 @@
             <table class="data display datatable" id="example">
 			<thead>
 				<tr>
-					<th>SL No.</th>
-					<th>Product Name</th>
-					<th>Category Name</th>
-					<th>Brand</th>
+					<th>Sl</th>
+					<th>Product</th>
+					<th>Category</th>
+					<th>Publisher</th>
 					<th>Description</th>
 					<th>Price</th>
 					<th>Image</th>
@@ -57,8 +57,8 @@
 					<td> <?php echo $result['catName'] ?> </td>
 					<td> <?php echo $result['brandName'] ?> </td>
 					<td> <?php echo $fm->textShorten($result['body'],50); ?> </td>
-					<td> $ <?php echo $result['price'] ?> </td>
-					<td> <img src="<?php echo $result['image']; ?>" alt="img" width="60px" height ="40px">  </td>
+					<td> Tk <?php echo $result['price'] ?> </td>
+					<td> <img src="<?php echo $result['image']; ?>" alt="img" width="40px" height ="50px">  </td>
 					<td> 
 						<?php 
 						if ($result['type'] == 0){
@@ -71,9 +71,9 @@
 					</td>
 	
 					<td>
-						<a href="productedit.php?proid=<?php echo $result['productId']; ?>">Edit</a> 
+						<a class="edit" href="productedit.php?proid=<?php echo $result['productId']; ?>">Edit</a> 
 						|| 
-						<a onclick="return confirm('Are you sure to delete?')" href="?delpro=<?php echo $result['productId']; ?>">Delete</a>
+						<a class="del" onclick="return confirm('Are you sure to delete?')" href="?delpro=<?php echo $result['productId']; ?>">Delete</a>
 					</td>
 				</tr>
 		<?php } } ?>
