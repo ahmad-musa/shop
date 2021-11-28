@@ -90,7 +90,7 @@ a {
 }
 
 a:hover {
-	color: #333;
+	color: var(--color1);
 }
 
 
@@ -148,11 +148,6 @@ h1 a {
 }
 
 #branding a:hover {
-	color: #fff;
-}
-
-#branding a:before {
-	content: " | ";
 	color: #fff;
 }
 
@@ -608,6 +603,7 @@ label.error {
 #site_info p {
 	line-height: 35px;
 	margin-bottom: 0px;
+	text-align: center;
 }
 
 #site_info a {
