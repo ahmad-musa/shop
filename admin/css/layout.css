@@ -3,11 +3,15 @@
 Grey Box Method - Layout CSS
 ----------------------------------------------- */
 :root{	
+	
 	--color1 	 : #70389C;
 	--color1_1 	 : #602D8D;
 	--font-red   : #CC3636;
 	--lightblack : #414045;
 	--darkblack  : #2f2e33;
+	--theme-bgcolor: #2E5E79;
+	--theme-color1: #1B548D;
+	--theme-color2: #1F4562;
 		
 }
 
@@ -87,6 +91,7 @@ a {
 	color: #000;
 	font-weight: bold;
 	text-decoration: none;
+	transition: all 0.5s ease;
 }
 
 a:hover {
@@ -98,7 +103,7 @@ a:hover {
 ----------------------------------------------- */
 .container_12,
 .container_16 {
-	background: #2E5E79;
+	background: var(--theme-bgcolor);
 }
 
 
@@ -139,7 +144,7 @@ h1 a {
 }
 
 .header-repeat {
-	background: url(../img/header-repeat.jpg) repeat-x;
+	/* background: url(../img/header-repeat.jpg) repeat-x; */
 }
 
 #branding a {
@@ -163,6 +168,11 @@ h1 a {
 
 .top-10 {
 	margin-top: -10px;
+}
+
+#branding .logo_icon{
+	color: #fff;
+	font-size: 1.75em;
 }
 
 
@@ -202,7 +212,7 @@ h2#page-heading {
 .box h2 {
 	font-size: 1.2em;
 	font-weight: bold;
-	color: #1B548D;
+	color: var(--theme-color1);
 	background: #E6F0F3;
 	margin: -10px -10px 0 -10px;
 	padding: 10px 12px;
@@ -218,7 +228,7 @@ h2#page-heading {
 
 .box h2 a,
 .box h2 a.visible {
-	color: #1B548D;
+	color: var(--theme-color1);
 	background: url("../img/switch_minus.gif") 97% 50% no-repeat;
 	display: block;
 	padding: 6px 12px;
@@ -383,7 +393,7 @@ ul.section li a:hover {
 }
 
 ul.section li a:active {
-	color: #1B548D;
+	color: var(--theme-color1);
 	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
 }
 
@@ -421,17 +431,17 @@ ul.section ul.current li a:active {
 }
 
 ul.section li a.current {
-	color: #1B548D;
+	color: var(--theme-color1);
 	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
 }
 
 ul.section li a.current:hover {
-	color: #1B548D;
+	color: var(--theme-color1);
 	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
 }
 
 ul.section li a.current:active {
-	color: #1B548D;
+	color: var(--theme-color1);
 	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
 }
 
@@ -566,7 +576,6 @@ span.error {
 	margin: 8px 0 0 0;
 	padding: 0;
 	height: 1%;
-
 	color: #FF0000;
 }
 
@@ -574,7 +583,6 @@ span.success {
 	margin: 8px 0 0 0;
 	padding: 0;
 	height: 1%;
-
 	color: #7b912b;
 }
 
@@ -594,10 +602,8 @@ label.error {
 ----------------------------------------------- */
 #site_info {
 	color: #fff;
-	background: #204562;
-	border-top: 1px solid #1d3b53;
-	padding-left: 20px;
-
+	background: var(--theme-bgcolor);
+	border-top: 1px solid #fff;
 }
 
 #site_info p {
@@ -607,11 +613,12 @@ label.error {
 }
 
 #site_info a {
-	color: #9ab6cc;
+	color: #fff;
+	font-weight: bold;
 }
 
 #site_info a:hover {
-	color: #000;
+	color: var(--color1_1);
 }
 
 
@@ -1567,7 +1574,7 @@ a.btn-icon.btn-large {
 	background-image: url(../img/bg-lite.png);
 	background-color: transparent;
 	filter: none;
-	border-color: transparent\0/;
+	border-color: transparent;
 	border-color: rgba(0, 0, 0, .4) !important;
 	margin: 0 1em 0 0;
 }

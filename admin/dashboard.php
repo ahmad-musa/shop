@@ -5,7 +5,8 @@
             <div class="box round first grid">
                 <h2> Dashboard</h2>
                 <div class="block">               
-                  Welcome Admin Panel        
+                  Welcome to the Admin Panel. <br>
+                  Hi <?php echo Session::get('adminName'); ?>        
                 </div>
             </div>
         </div>

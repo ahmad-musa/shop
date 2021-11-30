@@ -50,6 +50,7 @@ ul.dc_mm-orange li a{
 	text-shadow:1px 1px 1px #000;
 	text-transform:uppercase;
 	font-family:'Doppio One', sans-serif;
+	transition: all 0.3s ease;
 	/* border-left:2px groove #636363; */
 }
 ul.dc_mm-orange li a.dc-mega{

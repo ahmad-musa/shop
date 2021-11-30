@@ -21,6 +21,11 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
     <link href="css/table/demo_page.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+
     <!-- BEGIN: load jquery -->
     <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/jquery-ui/jquery.ui.core.min.js"></script>
@@ -32,6 +37,11 @@
     <script src="js/jquery-ui/jquery.ui.sortable.min.js" type="text/javascript"></script>
     <script src="js/table/jquery.dataTables.min.js" type="text/javascript"></script>
     <!-- END: load jquery -->
+
+    <!-- Font Awesome Icons -->
+
+    <!-- <script src="assets/fontawesome/js/fontawesome.min.js"></script> -->
+
     <script type="text/javascript" src="js/table/table.js"></script>
     <script src="js/setup.js" type="text/javascript"></script>
 	 <script type="text/javascript">
@@ -55,7 +65,9 @@
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
-                        <img src="img/img-profile.jpg" alt="Profile Pic" /></div>
+                        <i class="fas fa-user-circle logo_icon"></i>
+                        <!-- <img src="img/img-profile.jpg" alt="Profile Pic" /> -->
+                    </div>
 
                 <?php
                     if (isset($_GET['action']) && $_GET['action']=='logout') {
@@ -79,12 +91,19 @@
         </div>
         <div class="grid_12">
             <ul class="nav main">
+                <li ><a href="dashboard.php"> <i class="fas fa-chart-line"></i> <span>Dashboard</span></a> </li>
+                <li ><a href=""> <i class="fas fa-user-cog"> </i> <span>User Profile</span></a></li>
+				<li ><a href="changepassword.php"> <i class="fas fa-key"></i> <span>Change Password</span></a></li>
+				<li ><a href="inbox.php"> <i class="fas fa-envelope"></i> <span>Inbox</span></a></li>
+                <li ><a href=""> <i class="fas fa-globe"></i> <span>Visit Website</span></a></li>
+            </ul>
+            <!-- <ul class="nav main">
                 <li class="ic-dashboard"><a href="dashboard.php"><span>Dashboard</span></a> </li>
                 <li class="ic-form-style"><a href=""><span>User Profile</span></a></li>
 				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
 				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
                 <li class="ic-charts"><a href=""><span>Visit Website</span></a></li>
-            </ul>
+            </ul> -->
         </div>
         <div class="clear">
         </div>
