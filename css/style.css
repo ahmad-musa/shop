@@ -1919,7 +1919,7 @@ button.grey:hover,
 }
 
 .tblone td {
-	padding: 10px;
+	padding: 5px 10px;
 	text-align: center;
 }
 
@@ -1960,8 +1960,8 @@ table.tblone a:hover {
 }
 
 table.tblone img {
-	height: 20px;
-	width: 30px;
+	height: 35px;
+	width: 25px;
 }
 
 .save-btn{

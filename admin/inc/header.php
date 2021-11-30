@@ -79,7 +79,7 @@
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello <?php echo Session::get('adminName'); ?></li>
-                            <li><a href="?action=logout">Logout</a></li>
+                            <li><a class="btn_logout" href="?action=logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>

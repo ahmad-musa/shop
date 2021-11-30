@@ -130,7 +130,8 @@ ul.main li a {
 } */
 
 ul.main li a:focus {
-	color:#fff; background:var(--theme-color1);
+	color:#fff; 
+	background: var(--theme-color1);
 }
 
 /* ul.main li ul li a:hover {

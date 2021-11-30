@@ -149,7 +149,22 @@ h1 a {
 
 #branding a {
 	color: #A1EAFF;
-	font-weight: normal;
+}
+
+#branding .btn_logout{
+	margin: 0 0 0 .75em;
+	padding: 0.75em 1em;
+	background: var(--font-red);
+	color: #fff;
+	border-radius: 5px;
+	font-weight: bold;
+
+}
+
+#branding .btn_logout:hover{
+	background: transparent;
+	outline: 2px solid #fff;
+	color: var(--font-red);
 }
 
 #branding a:hover {
@@ -382,14 +397,26 @@ ul.section {
 
 ul.section li {}
 
+ul .menuitem{
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
+
+ul .submenu li:hover{
+	letter-spacing: .1em;
+}
+
 ul.section li a {
 	background: url(../img/sidemenu-repeat.jpg) repeat-x;
 	line-height: 26px;
 	padding-left: 28px;
+	color: var(--theme-color1);
 }
 
 ul.section li a:hover {
-	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
+	/* background: url(../img/sidemenu-repeat-hover.jpg) repeat-x; */
+	background: var(--color1);
+	color: #fff;
 }
 
 ul.section li a:active {
@@ -423,21 +450,22 @@ ul.section ul.current li a {
 }
 
 ul.section ul.current li a:hover {
-	background: #E6F0F3;
+	background: var(--theme-color1);
 }
 
 ul.section ul.current li a:active {
-	background: #E6F0F3;
+	background: var(--color1);
 }
 
 ul.section li a.current {
-	color: var(--theme-color1);
-	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
+	color: #fff;
+	/* background: url(../img/sidemenu-repeat-hover.jpg) repeat-x; */
+	background: var(--color1);
 }
 
 ul.section li a.current:hover {
-	color: var(--theme-color1);
-	background: url(../img/sidemenu-repeat-hover.jpg) repeat-x;
+	/* background: url(../img/sidemenu-repeat-hover.jpg) repeat-x; */
+	background: var(--theme-color1) ;
 }
 
 ul.section li a.current:active {
@@ -1010,18 +1038,6 @@ table.display {
 	clear: both;
 	width: 100%;
 
-	/* Note Firefox 3.5 and before have a bug with border-collapse
-	 * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 ) 
-	 * border-spacing: 0; is one possible option. Conditional-css.com is
-	 * useful for this kind of thing
-	 *
-	 * Further note IE 6/7 has problems when calculating widths with border width.
-	 * It subtracts one px relative to the other browsers from the first column, and
-	 * adds one to the end...
-	 *
-	 * If you want that effect I'd suggest setting a border-top/left on th/td's and 
-	 * then filling in the gaps with other borders.
-	 */
 }
 
 table.display th {
