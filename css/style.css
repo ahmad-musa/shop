@@ -147,6 +147,7 @@ table {
 
 a {
 	text-decoration: none;
+	transition: all 0.5s ease;
 }
 
 .txt-rt {
@@ -367,16 +368,22 @@ input[type="number"] {
 }
 
 .buysubmit {
-	background: var(--color1_1) url("../images/large-button-overlay.png") repeat scroll 0 0;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 5px;
+	background: var(--color1);
+	border-radius: 3px;
+	border: none;
 	color: #fff;
 	font-family: Arial, "Helvetica Neue", "Helvetica", Tahoma, Verdana, sans-serif;
 	font-size: 0.8em;
-	padding: 7px 15px;
+	font-weight: 600;
+	padding: 9px 20px;
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 	outline: none;
+}
+
+.buysubmit:hover {
+	background: var(--font-red);
+	color: #fff;
 }
 
 .wrapper-dropdown.active .dropdown {
@@ -386,25 +393,6 @@ input[type="number"] {
 	z-index: 1;
 	background: var(--color1);
 }
-
-/* .login {
-	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
-	border: 1px solid #cecece;
-	box-sizing: border-box;
-	color: #444; 
-	display: block;
-	float: left;
-	font-size: 27px;
-	height: 38px;
-	margin-left: 10px;
-	text-align: center;
-	width: 144px;
-}
-
-.login:hover{
-	background: var(--color1);
-	color: #ffffff;
-} */
 
 .login a {
 	background: rgba(0, 0, 0, 0) url("../images/gradient_light-1.png") repeat-x scroll 0 0;
@@ -1543,20 +1531,34 @@ button.grey:hover,
 	text-decoration: none;
 }
 
-.span_3_of_1 li a {
+
+.sidecat ul li:hover a{
+	background: var(--color1);
+	color: #fff;
+	letter-spacing: .2em;
+	border: none;
+}
+
+.sidecat li a {
 	font-size: 0.8125em;
-	padding: 0.42em 8%;
+	padding: 0.42em 1em;
 	color: #666;
 	display: block;
 	line-height: 1.6em;
 	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
 	border-bottom: 1px dashed #CCC;
-	background: url(../images/drop_arrow.png) no-repeat 5px 11px;
 }
 
-.span_3_of_1 li a:hover {
-	background: url(../images/drop_arrow-hover.png) no-repeat 5px 11px;
-	color: var(--color1_1);
+.sidecat ul li a i{
+	color: var(--color1);
+	font-size: 0.75em;
+	padding: 0 .75em 0 0;
+}
+
+.sidecat ul li:hover a i{
+	color: #fff;
+	font-size: 0.85em;
 }
 
 .span_3_of_2 .button {
@@ -1979,13 +1981,45 @@ table.tblone img {
 
 .shopping {
 	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
-.shopleft,
 .shopleft {
 	float: left;
 	text-align: center;
 	width: 610px;
+}
+
+.shopping .continue{
+	margin: 5em;
+	padding: 1em 2em;
+	background: var(--color1);
+	font-size: 1.35em;
+	border-radius: .35em;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	word-spacing: .5em;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shopping .continue:hover{
+	background: transparent;
+	outline: 2px solid var(--color1);
+	color: var(--color1);
+	
+}
+
+.shopping .checkout{
+	background: rgb(255, 123, 0);
+	color: #fff;
+}
+
+.shopping .checkout:hover{
+	background: transparent;
+	outline: 2px solid rgb(255, 123, 0);
+	color: rgb(255, 123, 0);
 }
 
 .shopleft img {

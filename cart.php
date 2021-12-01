@@ -127,10 +127,11 @@
 					</div>
 					<div class="shopping">
 						<div class="shopleft">
-							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
+							<!-- <a href="index.php"> <img src="images/shop.png" alt="" /></a> -->
+							<a class="continue" href="index.php"> Continue Shopping </a>
 						</div>
 						<div class="shopright">
-							<a href="login.php"> <img src="images/check.png" alt="" /></a>
+							<a class="continue checkout" href="login.php"> Checkout </a>
 						</div>
 					</div>
     	</div>  	

@@ -316,10 +316,11 @@ div.menu .block {
 
 .box.sidemenu {
 	background-color: #D1DEE4;
-	border-right: 1px solid #3A5665;
+	/* border-right: 1px solid #3A5665; */
 	padding: 0px;
 	margin: 0px;
 	cursor: pointer;
+	border-radius: 0 5px 0 0;
 }
 
 .box.sidemenu .block {
@@ -390,6 +391,11 @@ ul.menu ul li a {
 
 /* section menus
 ----------------------------------------------- */
+
+#section-menu ul.menu{
+	border-top: none;
+}
+
 ul.section {
 	border-top: 0;
 	margin-bottom: 0;
@@ -461,6 +467,7 @@ ul.section li a.current {
 	color: #fff;
 	/* background: url(../img/sidemenu-repeat-hover.jpg) repeat-x; */
 	background: var(--color1);
+	border-radius: 0 5px 0 0;
 }
 
 ul.section li a.current:hover {

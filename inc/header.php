@@ -33,6 +33,11 @@ header("Cache-Control: max-age=2592000");
 	<link rel="icon" type="image/png" href="./images/logo.png" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
+	
+	<!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="admin/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="admin/assets/fontawesome/css/fontawesome.min.css">
+	
 	<script src="js/jquerymain.js"></script>
 	<script src="js/script.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
