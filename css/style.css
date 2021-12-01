@@ -228,7 +228,7 @@ body {
 }
 
 .wrap {
-	width: 78%;
+	width: 80%;
 	margin: 0 auto;
 	padding: 0 1%;
 	background: #FFF;
@@ -367,7 +367,7 @@ input[type="number"] {
 	padding: 7px;
 }
 
-.buysubmit {
+.btn_submit {
 	background: var(--color1);
 	border-radius: 3px;
 	border: none;
@@ -381,7 +381,7 @@ input[type="number"] {
 	outline: none;
 }
 
-.buysubmit:hover {
+.btn_submit:hover {
 	background: var(--font-red);
 	color: #fff;
 }

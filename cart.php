@@ -44,9 +44,9 @@
 						<table class="tblone">
 							<tr>
 								<th width="5%">SL</th>
-								<th width="20%">Book Name</th>
-								<th width="15%">Image</th>
-								<th width="15%">Price</th>
+								<th width="30%">Book Name</th>
+								<th width="10%">Image</th>
+								<th width="10%">Price</th>
 								<th width="15%">Quantity</th>
 								<th width="15%">Total Price</th>
 								<th width="10%">Action</th>
@@ -127,7 +127,6 @@
 					</div>
 					<div class="shopping">
 						<div class="shopleft">
-							<!-- <a href="index.php"> <img src="images/shop.png" alt="" /></a> -->
 							<a class="continue" href="index.php"> Continue Shopping </a>
 						</div>
 						<div class="shopright">

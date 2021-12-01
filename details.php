@@ -44,7 +44,7 @@
                     <div class="add-cart">
                         <form action="" method="post">
                             <input type="number" class="buyfield" name="quantity" value="1" />
-                            <input type="submit" class="buysubmit" name="submit" value="Buy Now" />
+                            <input type="submit" class="btn_submit" name="submit" value="Buy Now" />
                         </form>
                     </div>
                     <span class="error">
