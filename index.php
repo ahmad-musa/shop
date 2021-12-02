@@ -27,12 +27,12 @@
 
                 <h2> <?php echo $result['productName'] ;?> </h2>
 
-                <p><?php echo $fm->textShorten($result['body'], 60) ;?> </p>
+                <p><?php echo $fm->textShorten($result['body'], 65) ;?> </p>
 
                 <p><span class="price">Tk <?php echo $result['price'] ;?></span></p>
 
-                <div class="button"><span><a href="details.php?proid=<?php echo $result['productId'] ;?>"
-                            class="details">Details</a></span></div>
+                <div class="button"><a href="details.php?proid=<?php echo $result['productId'] ;?>"
+                            class="details">Details</a></div>
             </div>
 
             <?php } }?>
@@ -60,6 +60,7 @@
                         src="admin/<?php echo $result['image'] ;?>" class="img_cng" alt="" /></a>
 
                 <h2> <?php echo $result['productName'] ;?> </h2>
+                <p><?php echo $fm->textShorten($result['body'], 65) ;?> </p>
 
                 <p><span class="price">Tk <?php echo $result['price'] ;?></span></p>
 

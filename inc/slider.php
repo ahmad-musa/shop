@@ -10,7 +10,9 @@
 				?>
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						 <a href="details.php?proid=<?php echo $result['productId'];?>"> <img src="admin/<?php echo $result['image'];?>" alt="" /></a>
+						<a href="details.php?proid=<?php echo $result['productId'];?>">
+						  	<img src="admin/<?php echo $result['image'];?>" alt="" />
+						</a>
 					</div>
 				    <div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
@@ -31,11 +33,13 @@
 
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						  <a href="details.php?proid=<?php echo $result['productId'] ;?>"><img src="admin/<?php echo $result['image']?>" alt=""></a>
+						<a href="details.php?proid=<?php echo $result['productId'] ;?>">
+						  <img src="admin/<?php echo $result['image']?>" alt="">
+						</a>
 					</div>
 					<div class="text list_2_of_1">
 						  <h2><?php echo $result['brandName']?></h2>
-						  <p><?php echo $result['productName']?>.</p>
+						  <p><?php echo $result['productName']?></p>
 						  <div class="button">
 							  <span><a href="details.php?proid=<?php echo $result['productId'] ;?>">Add to cart</a></span>
 						  </div>
@@ -55,11 +59,13 @@
 
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						  <a href="details.php?proid=<?php echo $result['productId'] ;?>"><img src="admin/<?php echo $result['image']?>" alt=""></a>
+						<a href="details.php?proid=<?php echo $result['productId'] ;?>">
+						  <img src="admin/<?php echo $result['image']?>" alt="">
+						</a>
 					</div>
 					<div class="text list_2_of_1">
 						  <h2><?php echo $result['brandName']?></h2>
-						  <p><?php echo $result['productName']?>.</p>
+						  <p><?php echo $result['productName']?></p>
 						  <div class="button">
 							  <span><a href="details.php?proid=<?php echo $result['productId'] ;?>">Add to cart</a></span>
 						  </div>
@@ -77,11 +83,13 @@
 
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						  <a href="details.php?proid=<?php echo $result['productId'] ;?>"><img src="admin/<?php echo $result['image']?>" alt=""></a>
+						<a href="details.php?proid=<?php echo $result['productId'] ;?>">
+						  <img src="admin/<?php echo $result['image']?>" alt="">
+						</a>
 					</div>
 					<div class="text list_2_of_1">
 						  <h2><?php echo $result['brandName']?></h2>
-						  <p><?php echo $result['productName']?>.</p>
+						  <p><?php echo $result['productName']?></p>
 						  <div class="button">
 							  <span><a href="details.php?proid=<?php echo $result['productId'] ;?>">Add to cart</a></span>
 						  </div>
