@@ -130,7 +130,7 @@
 							<a class="continue" href="index.php"> Continue Shopping </a>
 						</div>
 						<div class="shopright">
-							<a class="continue checkout" href="login.php"> Checkout </a>
+							<a class="continue checkout" href="payment.php"> Checkout </a>
 						</div>
 					</div>
     	</div>  	

@@ -22,8 +22,6 @@
             }
         ?>
 
-<!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit voluptate ad maiores eligendi nobis, iusto dicta animi labore eum quo ipsa quos voluptatem aliquid velit? Neque beatae corrupti perferendis ad consequuntur quod sapiente minus nobis! -->
-
          <form action="" method="post" enctype="multipart/form-data">
             <table class="form">
                
