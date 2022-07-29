@@ -16,12 +16,18 @@
 
 			<!-- newly added -->
 			<?php 
-				$productbycat = $pd->productByCat($id); 
-				if ($productbycat) {
-					while ($result = $productbycat->fetch_assoc()) {
+			//	$productbycat = $pd->productByCat($id); 
+			//	if ($productbycat) {
+			//		while ($result = $productbycat->fetch_assoc()) {
+			?>
+			
+			<?php 
+				$namebycat = $pd->getCatNameById($id); 
+				if ($namebycat) {
+					while ($result = $namebycat->fetch_assoc()) {
 			?>
 
-    		<h3> <?php echo $result['catName'];?> </h3>
+    		<h3> <?php echo $result['catName'];?> <b> () <b> </h3>
 
 			<?php 	} }?>  <!-- newly added --> 
     		</div> 

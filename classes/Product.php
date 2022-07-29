@@ -335,11 +335,14 @@
     }
 
 
-    // public function getCatNameById($id){
-    //     $query = "SELECT tbl_category.catName, tbl_product.* FROM tbl_category, tbl_product WHERE tbl_product.catId = tbl_category.catId AND tbl_category.catId = '$id' ";
-    //     $result = $this->db->select($query);
-    //     return $result;
-    // }
+    public function getCatNameById($id){
+        $catId     = mysqli_real_escape_string($this->db->link, $id);
+
+        $query = "SELECT DISTINCT catName FROM tbl_category WHERE catId = '$catId' ";
+
+        $result = $this->db->select($query);
+        return $result;
+    }
 
     // public function countProductFromCat($id){
     //     $query = "SELECT COUNT(catName) FROM tbl_category WHERE catId = '$id'";
