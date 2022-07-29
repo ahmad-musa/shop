@@ -1,10 +1,10 @@
 <?php include 'inc/header.php';?>
 
 <?php
-	if (!isset($_GET['catId']) || $_GET['catId'] == NULL) {
+	if (!isset($_GET['brandId']) || $_GET['brandId'] == NULL) {
         echo "<script> window.location = '404.php'; </script>";
     } else {
-        $id =  preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['catId']);
+        $id =  preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['brandId']);
     }
 ?> 
 
@@ -15,21 +15,21 @@
     		<div class="heading">
 			
 			<?php 
-				$namebycat = $cat->getCatNameById($id);
-				if ($namebycat ) {
-					while ($result = $namebycat->fetch_assoc() ) {
+				$namebybrand = $br->getBrandNameById($id);
+				if ($namebybrand ) {
+					while ($result = $namebybrand->fetch_assoc() ) {
 			?>
 
-    		<h3> <?php echo $result['catName'];?> 
+    		<h3> <?php echo $result['brandName'];?> 
 				 <?php 	} }?> 
 
 				<?php 
-					$productofcat = $pd->countProductOfCat($id);
-					if ($productofcat ) {
-					while ($result = $productofcat->fetch_assoc() ) {
+					$productofbrand = $pd->countProductOfBrand($id);
+					if ($productofbrand ) {
+					while ($result = $productofbrand->fetch_assoc() ) {
 				?>
 
-				<b> (<?php echo $result['Total'];?> Book/s) <b> 
+				<b>Publication (<?php echo $result['Total'];?> Book/s) <b> 
 				
 				<?php 	} }?> 
 
@@ -45,9 +45,9 @@
 	      <div class="section group">
 
 		  	<?php 
-				$productbycat = $pd->productByCat($id); 
-				if ($productbycat) {
-					while ($result = $productbycat->fetch_assoc()) {
+				$productbybrand = $pd->productByBrand($id); 
+				if ($productbybrand) {
+					while ($result = $productbybrand->fetch_assoc()) {
 			?>
 
 				<div class="grid_1_of_4 images_1_of_4">

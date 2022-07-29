@@ -114,5 +114,16 @@
             }
         }
 
+        public function getBrandNameById($id){
+            $brandId     = mysqli_real_escape_string($this->db->link, $id);
+    
+            $query = "SELECT DISTINCT brandName FROM tbl_brand WHERE brandId = '$brandId' ";
+    
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+
+
     }
 ?>

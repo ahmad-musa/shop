@@ -345,8 +345,25 @@
     }
 
 
+    public function productByBrand($id){
+        $brandId     = mysqli_real_escape_string($this->db->link, $id);
+        // $catName   = mysqli_real_escape_string($this->db->link, $id);
 
-    
+        $query  = "SELECT tbl_brand.brandName, tbl_product.* FROM tbl_product, tbl_brand WHERE tbl_product.brandId = tbl_brand.brandId AND tbl_product.brandId = '$brandId' ";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+    public function countProductOfBrand($id){
+        $brandId     = mysqli_real_escape_string($this->db->link, $id);
+
+        $query = "SELECT COUNT(productId) AS Total FROM tbl_product WHERE brandId = '$brandId' ";
+
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+
     
     }
 

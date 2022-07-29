@@ -38,8 +38,17 @@
                     <h2><?php echo $result['productName'];?></h2>
                     <div class="price">
                         <p>Price: <span>Tk <?php echo $result['price'];?></span></p>
-                        <p>Category: <span><?php echo $result['catName'];?></span></p>
-                        <p>Publication: <span><?php echo $result['brandName'];?></span></p>
+                        <p>Category: 
+                            <a href="productbycat.php?catId=<?php echo $result['catId'];?>"> 
+                                <span> <?php echo $result['catName'];?> </span> 
+                            </a> 
+                        </p>
+                        <p>Publication: 
+                            <a href="productbybrand.php?brandId=<?php echo $result['brandId'];?>"> 
+                                <span> <?php echo $result['brandName'];?> </span> 
+                            </a> 
+                        </p>
+                        <!-- <p>Publication: <span><?php //echo $result['brandName'];?></span></p> -->
                     </div>
                     <div class="add-cart">
                         <form action="" method="post">
