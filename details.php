@@ -66,7 +66,7 @@
             </div>
 
             <div class="rightsidebar sidecat span_3_of_1">
-                <h2>CATEGORIES</h2>
+                <h2> <a href="category.php">CATEGORIES</a></h2>
                 <ul>
 
                     <?php 

@@ -33,6 +33,7 @@ header("Cache-Control: max-age=2592000");
 	<link rel="icon" type="image/png" href="./images/logo.png" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 	
 	<!-- Font Awesome Icons -->
     <link rel="stylesheet" href="admin/assets/fontawesome/css/all.min.css">
@@ -123,7 +124,7 @@ header("Cache-Control: max-age=2592000");
 			<ul id="dc_mega-menu-orange" class="dc_mm-orange">
 				<li> <a href="index.php"> Home </a> </li>
 				<li> <a href="products.php"> Products </a> </li>
-				<li> <a href="topbrands.php"> Top Publisher </a> </li>
+				<li> <a href="category.php"> Category </a> </li>
 
 				<?php
 				$chkCart = $ct->checkCartTable();
