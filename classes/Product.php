@@ -335,20 +335,14 @@
     }
 
 
-    public function getCatNameById($id){
+    public function countProductOfCat($id){
         $catId     = mysqli_real_escape_string($this->db->link, $id);
 
-        $query = "SELECT DISTINCT catName FROM tbl_category WHERE catId = '$catId' ";
+        $query = "SELECT COUNT(productId) AS Total FROM tbl_product WHERE catId = '$catId' ";
 
         $result = $this->db->select($query);
         return $result;
     }
-
-    // public function countProductFromCat($id){
-    //     $query = "SELECT COUNT(catName) FROM tbl_category WHERE catId = '$id'";
-    //     $result = $this->db->select($query);
-    //     return $result;
-    // }
 
 
 

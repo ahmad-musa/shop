@@ -78,12 +78,9 @@
 
                     $msg= "<span class = 'success'> Category updated successfully! </span>";
                     return $msg;
-
                 } else {
-
                     $msg= "<span class = 'error'> Category not updated! </span>";
                     return $msg;
-
                 }
             }
         }
@@ -97,16 +94,22 @@
             $result = $this->db->delete($query);
            
             if ($result) {
-
                 $msg= "<span class = 'success'> Category deleted successfully! </span>";
                 return $msg;
-
             } else {
-
                 $msg= "<span class = 'error'> Category not deleted! </span>";
                 return $msg;
-
             }
+        }
+
+
+        public function getCatNameById($id){
+            $catId     = mysqli_real_escape_string($this->db->link, $id);
+    
+            $query = "SELECT DISTINCT catName FROM tbl_category WHERE catId = '$catId' ";
+    
+            $result = $this->db->select($query);
+            return $result;
         }
     
 

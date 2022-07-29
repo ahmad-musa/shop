@@ -13,23 +13,28 @@
     	<div class="content_top">
 		
     		<div class="heading">
-
-			<!-- newly added -->
-			<?php 
-			//	$productbycat = $pd->productByCat($id); 
-			//	if ($productbycat) {
-			//		while ($result = $productbycat->fetch_assoc()) {
-			?>
 			
 			<?php 
-				$namebycat = $pd->getCatNameById($id); 
-				if ($namebycat) {
-					while ($result = $namebycat->fetch_assoc()) {
+				$namebycat = $cat->getCatNameById($id);
+				if ($namebycat ) {
+					while ($result = $namebycat->fetch_assoc() ) {
 			?>
 
-    		<h3> <?php echo $result['catName'];?> <b> () <b> </h3>
+    		<h3> <?php echo $result['catName'];?> 
+				 <?php 	} }?> 
 
-			<?php 	} }?>  <!-- newly added --> 
+				<?php 
+					$productofcat = $pd->countProductOfCat($id);
+					if ($productofcat ) {
+					while ($result = $productofcat->fetch_assoc() ) {
+				?>
+
+				<b> (<?php echo $result['Total'];?>) <b> 
+				
+				<?php 	} }?> 
+
+			</h3>
+
     		</div> 
 
 			
