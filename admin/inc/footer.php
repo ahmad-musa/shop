@@ -5,7 +5,7 @@
     </div>
     <div id="site_info">
         <p>
-         &copy; Copyright <a href="#">Pushtalk</a>. All Rights Reserved.
+         &copy; Copyright <a href="/shop/index.php">Pushtalk</a>. All Rights Reserved.
         </p>
     </div>
 

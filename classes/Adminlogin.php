@@ -41,7 +41,7 @@ class Adminlogin{
                 Session::set("adminId",   $value['adminId']);
                 Session::set("adminUser", $value['adminUser']);
                 Session::set("adminName", $value['adminName']);
-                header("Location:dashboard.php");
+                header("Location:index.php");
 
             } else {
 

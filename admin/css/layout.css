@@ -228,6 +228,7 @@ h2#page-heading {
 	font-size: 1.2em;
 	font-weight: bold;
 	color: var(--theme-color1);
+	text-align: center;
 	background: #E6F0F3;
 	margin: -10px -10px 0 -10px;
 	padding: 10px 12px;

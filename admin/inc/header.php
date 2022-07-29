@@ -57,7 +57,7 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                <a href="dashboard.php"> <img class="logo" src="img/livelogo.png" alt="Logo"> </a> 
+                <a href="index.php"> <img class="logo" src="img/livelogo.png" alt="Logo"> </a> 
 				</div>
 				<div class="floatleft middle">
 					<h1>Pushtalk</h1>
@@ -91,11 +91,10 @@
         </div>
         <div class="grid_12">
             <ul class="nav main">
-                <li ><a href="dashboard.php"> <i class="fas fa-chart-line"></i> <span>Dashboard</span></a> </li>
-                <li ><a href=""> <i class="fas fa-user-cog"> </i> <span>User Profile</span></a></li>
+                <li ><a href="index.php"> <i class="fas fa-chart-line"></i> <span>Dashboard</span></a> </li>
+                <li ><a href="userprofile.php"> <i class="fas fa-user-cog"> </i> <span>User Profile</span></a></li>
 				<li ><a href="changepassword.php"> <i class="fas fa-key"></i> <span>Change Password</span></a></li>
-				<li ><a href="inbox.php"> <i class="fas fa-envelope"></i> <span>Inbox</span></a></li>
-                <li ><a href=""> <i class="fas fa-globe"></i> <span>Visit Website</span></a></li>
+				<!-- <li ><a href="inbox.php"> <i class="fas fa-envelope"></i> <span>Inbox</span></a></li> -->
             </ul>
             <!-- <ul class="nav main">
                 <li class="ic-dashboard"><a href="dashboard.php"><span>Dashboard</span></a> </li>

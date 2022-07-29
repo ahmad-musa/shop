@@ -45,7 +45,7 @@ class Session
     {
         self::init();
         if (self::get("adminlogin") == true) {
-            header("Location:dashboard.php");
+            header("Location:index.php");
         }
     }
 
