@@ -124,8 +124,8 @@ header("Cache-Control: max-age=2592000");
 		<div class="menu">
 			<ul id="dc_mega-menu-orange" class="dc_mm-orange">
 				<li> <a href="index.php"> Home </a> </li>
-				<li> <a href="products.php"> Products </a> </li>
 				<li> <a href="category.php"> Category </a> </li>
+				<li> <a href="products.php"> Products </a> </li>
 
 				<?php
 				$chkCart = $ct->checkCartTable();

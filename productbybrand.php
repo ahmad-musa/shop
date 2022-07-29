@@ -10,70 +10,101 @@
 
  <div class="main">
     <div class="content">
-    	<div class="content_top">
-		
-    		<div class="heading">
+
+			<div class="content_top">
+					<div class="heading">
+						<h3>Choose Publication:</h3>
+					</div>
+					<div class="clear"></div>
+			</div>
+			<div class="section group sidecat j_c_center ">
+
+					<ul class="center">
+
+						<?php 
+							$getBrand = $br->getAllBrand(); 
+							if ($getBrand) {
+								while ($result = $getBrand->fetch_assoc()) {  
+						?>
+
+						<li class="flex-direction"> 
+							<a href="productbybrand.php?brandId=<?php echo $result['brandId'];?>">
+								<?php echo $result['brandName'];?>
+								<i class="fas fa-chevron-down"> </i>
+							</a>
+						</li>
+
+						<?php } } ?>
+
+					</ul>
+
+			</div>
 			
-			<?php 
-				$namebybrand = $br->getBrandNameById($id);
-				if ($namebybrand ) {
-					while ($result = $namebybrand->fetch_assoc() ) {
-			?>
 
-    		<h3> <?php echo $result['brandName'];?> 
-				 <?php 	} }?> 
-
-				<?php 
-					$productofbrand = $pd->countProductOfBrand($id);
-					if ($productofbrand ) {
-					while ($result = $productofbrand->fetch_assoc() ) {
-				?>
-
-				<b>Publication (<?php echo $result['Total'];?> Book/s) <b> 
-				
-				<?php 	} }?> 
-
-			</h3>
-
-    		</div> 
-
+			<div class="content_top">
 			
-
-    		<div class="clear"></div>
-    	</div>
-
-	      <div class="section group">
-
-		  	<?php 
-				$productbybrand = $pd->productByBrand($id); 
-				if ($productbybrand) {
-					while ($result = $productbybrand->fetch_assoc()) {
-			?>
-
-				<div class="grid_1_of_4 images_1_of_4">
-					 
-					<a href="details.php?proid=<?php echo $result['productId'] ;?>"><img
-							src="admin/<?php echo $result['image'] ;?>" class="img_cng" alt="" /></a>
-
-					<h2> <?php echo $result['productName'] ;?> </h2>
-
-					<p><?php echo $fm->textShorten($result['body'], 60) ;?> </p>
-
-					<p><span class="price">Tk <?php echo $result['price'] ;?></span></p>
-
-					<div class="button"> <span> 
-						<a href="details.php?proid=<?php echo $result['productId'] ;?>"
-						class="details">Details</a>
-						</span> </div>
-				</div>
-			<?php 	} } else {
-				echo "<h3> This category has no products available! </h3>";
-			} ?>
+				<div class="heading">
 				
+					<?php 
+						$namebybrand = $br->getBrandNameById($id);
+						if ($namebybrand ) {
+							while ($result = $namebybrand->fetch_assoc() ) {
+					?>
+
+					<h3> 
+						<?php echo $result['brandName'];?> 
+						<?php 	} }?> 
+
+						<?php 
+							$productofbrand = $pd->countProductOfBrand($id);
+							if ($productofbrand ) {
+							while ($result = $productofbrand->fetch_assoc() ) {
+						?>
+
+						<b>Publication (<?php echo $result['Total'];?> Book/s) <b> 
+						<?php 	} }?> 
+					</h3>
+
+				</div> 
+				
+				<div class="clear"></div>
 			</div>
 
-    </div>
- </div>
+			<div class="section group">
 
+					<?php 
+						$productbybrand = $pd->productByBrand($id); 
+						if ($productbybrand) {
+							while ($result = $productbybrand->fetch_assoc()) {
+					?>
+
+					<div class="grid_1_of_4 images_1_of_4">
+						
+						<a href="details.php?proid=<?php echo $result['productId'] ;?>">
+							<img  src="admin/<?php echo $result['image'] ;?>" class="img_cng" alt="" />
+						</a>
+
+						<h2> <?php echo $result['productName'] ;?> </h2>
+
+						<p><?php echo $fm->textShorten($result['body'], 60) ;?> </p>
+
+						<p><span class="price">Tk <?php echo $result['price'] ;?></span></p>
+
+						<div class="button"> 
+							<span> 
+								<a href="details.php?proid=<?php echo $result['productId'] ;?>"
+									class="details">Details</a>
+							</span> 
+						</div>
+					</div>
+					<?php 	} } else {
+						echo "<h3> This category has no products available! </h3>";
+					} ?>
+					
+			</div>
+
+		</div>
+ </div>
+ </div>
 
  <?php include 'inc/footer.php';?>
