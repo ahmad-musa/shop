@@ -118,9 +118,9 @@
                     <td>
                         <label>Upload Image</label>
                     </td>
-                    <td>
-                        <img src="<?php echo $value['image']; ?>" alt="image" width="45px" height ="50px"> <br>
-                        <input name="image" type="file"/>
+                    <td style="display: flex">
+                        <input name="image" type="file" id="imgInput"/>
+                        <img id="imgSelect" src="<?php echo $value['image']; ?>" alt="image" width="45px" height ="60px">
                     </td>
                 </tr>
 				
@@ -170,6 +170,25 @@
     });
 </script>
 <!-- Load TinyMCE -->
+
+<!-- thumbnail img -->
+<script type="text/javascript">
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('#imgSelect').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#imgInput").change(function() {
+      readURL(this);
+    });
+</script>
+<!-- thumbnail img -->
+
 <?php include 'inc/footer.php';?>
 
 
