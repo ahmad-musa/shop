@@ -67,7 +67,7 @@
 
                                 if ($getBrand){
                                     while ($result = $getBrand->fetch_assoc()){
-                           ?> 
+                            ?> 
                             <option value="<?php echo $result['brandId'];?>"> <?php echo $result['brandName'];?> </option>
                             
                         <?php }  } ;?>
@@ -96,8 +96,9 @@
                     <td>
                         <label>Upload Image</label>
                     </td>
-                    <td>
-                        <input name="image" type="file" />
+                    <td style="display: flex">
+                        <input type='file' id="imgInput"/>
+                        <img id="imgSelect" src="#" alt=" img" width="55px" height ="75px"/>
                     </td>
                 </tr>
 				
@@ -125,6 +126,7 @@
         </div>
     </div>
 </div>
+
 <!-- Load TinyMCE -->
 <script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -136,6 +138,30 @@
     });
 </script>
 <!-- Load TinyMCE -->
+
+<!-- thumbnail img -->
+<script type="text/javascript">
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('#imgSelect').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#imgInput").change(function() {
+      readURL(this);
+    });
+</script>
+<!-- thumbnail img -->
+
+  
+
+
+
+
 <?php include 'inc/footer.php';?>
 
 

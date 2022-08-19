@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2021 at 10:27 AM
+-- Generation Time: Aug 12, 2022 at 05:00 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -131,7 +131,8 @@ CREATE TABLE `tbl_customer` (
 
 INSERT INTO `tbl_customer` (`id`, `name`, `address`, `city`, `country`, `zip`, `phone`, `email`, `pass`) VALUES
 (1, 'ABM Musa', 'Dhanmondi', 'Dhaka', 'Bangladesh', '1205', '019999972', 'one@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(2, 'Musa', 'Dhanmondi', 'Dhaka', 'Bangladesh', '1205', '019999972', 'two@gmail.com', '202cb962ac59075b964b07152d234b70');
+(2, 'Musa', 'Dhanmondi', 'Dhaka', 'Bangladesh', '1205', '019999972', 'two@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(3, 'ABM Hafiz', 'Moghbazar', 'Dhaka', 'Bangladesh', '1205', '019999972', 'three@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -155,23 +156,25 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`productId`, `productName`, `catId`, `brandId`, `body`, `price`, `image`, `type`) VALUES
-(1, 'Paradoxical Sajid', 2, 1, '<p>Paradoxical Sajid</p>\r\n<p>by Arif Azad</p>\r\n<p>Guardian Publication</p>', 380.66, 'uploads/44a9e6c3d4.jpg', 0),
-(2, 'Animal Farm ', 7, 3, '<p>Animal Farm&nbsp;</p>\r\n<p>Author: George Orwell</p>\r\n<p>Publisher:</p>', 180.50, 'uploads/e42a9f51ae.png', 1),
-(3, 'Jadughor Pata Ache Ekhane', 8, 2, '<p>Jadughor Pata Ache Ekhane</p>\r\n<p>by Kisho Pasha Imon</p>', 305.00, 'uploads/46ed199311.jpg', 0),
+(1, 'Paradoxical Sajid', 2, 1, '<p>Paradoxical Sajid by Arif Azad. Guardian Publication</p>', 380.66, 'uploads/44a9e6c3d4.jpg', 0),
+(2, 'Animal Farm ', 7, 3, '<p>Animal Farm. Author: George Orwell. Publisher:</p>', 180.50, 'uploads/e42a9f51ae.png', 1),
+(3, 'Jadughor Pata Ache Ekhane', 8, 2, '<p>Jadughor Pata Ache Ekhane by Kishor Pasha Imon</p>', 305.00, 'uploads/46ed199311.jpg', 0),
 (4, 'Fundamentals of Electric Circuits', 1, 4, '<p>Fundamentals of Electric Circuits (5th ed)</p>\r\n<p>Author: Charles K. Alexander, Matthew N. O. Sadiku</p>\r\n<p>Publisher: Mc. Graw Hill</p>', 305.50, 'uploads/145a1c8cc1.jpg', 0),
-(5, 'Computer Organization and Architecture', 1, 5, '<p>Computer Organization and Architecture</p>\r\n<p>By William Stallings</p>\r\n<p>Indian Edition Published By Dorling Kindersley India Pvt. Ltd.</p>', 280.00, 'uploads/3e469f42ef.png', 0),
-(6, 'Numerical Methods for Engineers', 1, 4, '<p>Numerical Methods for Engineers<br /> SEVENTH EDITION</p>\r\n<p>Published by McGraw-Hill Education, 2 Penn Plaza, New York, NY 10121</p>', 260.00, 'uploads/b04ed04701.jpg', 1),
-(7, 'SQL, PL/SQL', 1, 5, '<p>SQL, PL/SQL: The Programming Language of Oracle</p>\r\n<p>by&nbsp;<a href=\"https://www.goodreads.com/author/show/135278.Ivan_Bayross\">Ivan Bayross</a></p>\r\n<p>Published 2002 by BPB Publications</p>', 330.00, 'uploads/a230e94513.jpg', 1),
+(5, 'Computer Organization and Architecture', 1, 5, '<p>Computer Organization and Architecture by William Stallings. Publication: Dorling Kindersley India Pvt. Ltd.</p>', 280.00, 'uploads/3e469f42ef.png', 0),
+(6, 'Numerical Methods for Engineers', 1, 4, '<p>Numerical Methods for Engineers.&nbsp;Publication: McGraw-Hill Education</p>', 260.00, 'uploads/b04ed04701.jpg', 1),
+(7, 'SQL, PL/SQL', 1, 5, '<p>SQL, PL/SQL: The Programming Language of Oracle by&nbsp;<a href=\"https://www.goodreads.com/author/show/135278.Ivan_Bayross\">Ivan Bayross</a>. BPB Publications</p>', 330.00, 'uploads/a230e94513.jpg', 1),
 (8, 'Shesh Prosno', 6, 3, '<p><span style=\"font-size: 1.17em;\">শেষ প্রশ্ন </span></p>\r\n<p><span style=\"font-size: 1.17em;\">by Sarat Chandra Chattopadhyay</span></p>\r\n<p><span style=\"font-size: 1.17em;\">Digital Publisher</span></p>', 150.00, 'uploads/5ca3e851cc.jpg', 0),
-(9, 'Golpoguccho', 6, 3, '<p>গল্পগুচ্ছ<strong> </strong></p>\r\n<p>Author: রবীন্দ্রনাথ ঠাকুর&nbsp;</p>\r\n<p>Publisher: Ananda</p>', 200.00, 'uploads/3fdf9a9fe5.jpg', 0),
-(10, 'Hamlet', 7, 2, '<p>Hamlet</p>\r\n<p>Author:&nbsp; William Shakespeare&nbsp;</p>\r\n<p>Publisher: Oxford Press</p>', 140.00, 'uploads/41348d8915.jpg', 0),
-(11, 'Sonchita', 4, 3, '<p>সঞ্চিতা</p>\r\n<p>Author: Kazi&nbsp;Nazrul&nbsp;Islam</p>\r\n<p>Publisher:</p>', 130.00, 'uploads/427f45a8ac.png', 1),
-(12, 'Paradoxical Sajid 2', 2, 1, '<p>Paradoxical Sajid 2</p>\r\n<p>by Arif Azad</p>\r\n<p>Guardian Publication</p>', 425.00, 'uploads/2ee0664f5f.jpg', 0),
-(13, 'Spirit of Islam', 2, 7, '<p>The Spirit of Islam</p>\r\n<p>by Sir Syed Amir Ali</p>', 300.00, 'uploads/9aaee34c9b.jpg', 0),
-(14, 'Alchemist', 7, 2, '<p>Alchemist</p>\r\n<p>by Pahlo Coelho</p>', 245.00, 'uploads/fe3a78fd47.jpg', 0),
-(15, 'Inferno', 8, 3, '<p>Inferno</p>\r\n<p>by Dan Drown</p>', 300.00, 'uploads/8c07572eb7.jpg', 0),
-(16, 'Kobor', 3, 2, '<p>Kobor&nbsp;</p>\r\n<p>By Munir Chowdhury</p>', 175.00, 'uploads/279ea597b2.jpg', 1),
-(17, 'Nil Dorpon', 3, 2, '<p>Nil Dorpon</p>\r\n<p>by Dinbondhu Mitra</p>', 160.00, 'uploads/6a9f1a40a2.jpg', 1);
+(9, 'Golpoguccho', 6, 3, '<p>গল্পগুচ্ছ. Author: রবীন্দ্রনাথ ঠাকুর. Publisher: Ananda</p>', 200.00, 'uploads/3fdf9a9fe5.jpg', 0),
+(10, 'Hamlet', 7, 2, '<p>Hamlet. Author:&nbsp; William Shakespeare. Publisher: Oxford Press</p>', 140.00, 'uploads/41348d8915.jpg', 0),
+(11, 'Sonchita', 4, 3, '<p>সঞ্চিতা Author: Kazi&nbsp;Nazrul&nbsp;Islam. Publisher:</p>', 130.00, 'uploads/427f45a8ac.png', 1),
+(12, 'Paradoxical Sajid 2', 2, 1, '<p>Paradoxical Sajid 2 by Arif Azad Guardian Publication</p>', 425.00, 'uploads/2ee0664f5f.jpg', 0),
+(13, 'Spirit of Islam', 2, 7, '<p>The Spirit of Islam by Sir Syed Amir Ali</p>', 300.00, 'uploads/9aaee34c9b.jpg', 0),
+(14, 'Alchemist', 7, 2, '<p>Alchemist by Pahlo Coelho</p>', 245.00, 'uploads/fe3a78fd47.jpg', 0),
+(15, 'Inferno', 8, 3, '<p>Inferno by Dan Drown</p>', 300.00, 'uploads/8c07572eb7.jpg', 0),
+(16, 'Kobor', 3, 2, '<p>Kobor By Munir Chowdhury</p>', 175.00, 'uploads/279ea597b2.jpg', 1),
+(17, 'Nil Dorpon', 3, 2, '<p>Nil Dorpon by Dinbondhu Mitra</p>', 160.00, 'uploads/6a9f1a40a2.jpg', 1),
+(18, 'Principles of Power System', 1, 5, '<p>Principles of Power System By Rohit Mehta , V.K Mehta Publisher: S. Chand</p>', 290.00, 'uploads/1a64778221.jpg', 0),
+(19, 'The Lost Symbol', 8, 2, '<p>The Lost Symbol by Dawn Brown</p>', 320.00, 'uploads/ce05b3c09d.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -233,7 +236,7 @@ ALTER TABLE `tbl_brand`
 -- AUTO_INCREMENT for table `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
@@ -245,13 +248,13 @@ ALTER TABLE `tbl_category`
 -- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

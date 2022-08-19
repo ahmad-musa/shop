@@ -94,8 +94,6 @@ header("Cache-Control: max-age=2592000");
 							</span>
 						</a>
 
-						
-
 					</div>
 				</div>
 
