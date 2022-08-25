@@ -70,8 +70,8 @@ header("Cache-Control: max-age=2592000");
 			</div>
 			<div class="header_top_right">
 				<div class="search_box">
-					<form>
-						<input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}">
+					<form action="search.php" method="get">
+						<input type="text" name="search" value="Khoj : The Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Khoj : The Search';}">
 						<input type="submit" value="SEARCH">
 					</form>
 				</div>

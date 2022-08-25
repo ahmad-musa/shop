@@ -110,6 +110,20 @@
             return $result;
         }
 
+        public function searchProduct($search){
+
+            $query = "SELECT p.*, c.catName, b.brandName 
+                        FROM tbl_product AS p, tbl_category AS c, tbl_brand AS b
+                        WHERE (p.catId = c.catId AND p.brandId = b.brandId) AND 
+                        (productName LIKE '%$search%' OR catName LIKE '%$search%' OR 
+                        brandName LIKE '%$search%' OR body LIKE '%$search%' OR 
+                        price LIKE '%$search%')
+                        ORDER BY p.productId DESC";
+
+            $result = $this->db->select($query);
+            return $result;
+        }
+
 
         public function getProById($id){
             $query = "SELECT * FROM tbl_product WHERE productId = '$id' ORDER BY productId DESC";

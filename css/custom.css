@@ -4,6 +4,30 @@
     justify-content: center;
 }
 
+.text_center{
+    text-align: center;
+}
+
+.sentence_case{
+   text-transform: none;
+}
+
+.small_case{
+   text-transform: lowercase; 
+}
+
+.upper_case{
+   text-transform: uppercase; 
+}
+
+.bold{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.red{
+    color: red;
+}
 /* .flex-direction{
     display: flex;
     flex-direction: column;

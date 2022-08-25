@@ -8,7 +8,7 @@
     <div class="content">
         <div class="content_top">
             <div class="heading">
-                <h3>Feature Products</h3>
+                <h3>Featured Products</h3>
             </div>
             <div class="clear"></div>
         </div>
