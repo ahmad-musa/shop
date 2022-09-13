@@ -56,8 +56,18 @@
 
                 $msg  = "<span class = 'error'> Email already exist! </span>";
                 return $msg;
+            } 
 
-            } else {
+            $phonequery = " SELECT * FROM tbl_customer WHERE phone = '$phone' LIMIT 1";
+            $phonechk   = $this->db->select($phonequery);
+
+            if ($phonechk != false) {
+
+                $msg  = "<span class = 'error'> Phone number already exist! </span>";
+                return $msg;
+            } 
+            
+            else {
 
                 $query = "INSERT INTO tbl_customer(name, address, city, country, zip, phone, email, pass) 
                 VALUES('$name', '$address', '$city', '$country', '$zip','$phone', '$email', '$pass')";
