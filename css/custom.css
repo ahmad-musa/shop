@@ -36,6 +36,25 @@
 .red{
     color: red;
 }
+
+.btn{
+    padding: 0.5rem 1.75rem;
+    cursor: pointer;
+    background: none;
+    transition: all 250ms ease-in;
+    box-sizing: border-box;
+}
+
+.btn_send{
+    border: 2px solid var(--color1);
+    border-radius: 1.25rem;
+}
+
+.btn_send:hover{
+    background: var(--color1);
+    color: #fff;
+}
+
 /* .flex-direction{
     display: flex;
     flex-direction: column;
