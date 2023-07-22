@@ -2124,8 +2124,8 @@ table.tblone img {
 }
 
 .contact-form span {
-	display: block;
-	font-size: 0.8125em;
+	/* display: block; */
+	font-size: 1rem;
 	/* color: #757575; */
 	padding-bottom: 5px;
 	font-family: verdana, arial, helvetica, helve, sans-serif;

@@ -16,17 +16,54 @@
         $body     = mysqli_real_escape_string($db->link, $body);
 
 
-		$error 	= " ";
+		// $error	= " ";
+		// if(empty($name)){
+		// 	$error 	= "Name must not be empty! ";
+		// }elseif(empty($email)){
+		// 	$error 	= "Email must not be empty! ";
+		// }elseif(empty($body)){
+		// 	$error 	= "Message must not be empty! ";
+		// }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+		// 	$error 	= "Invalid Email!";
+		// } else{
+
+		// 	$query = "INSERT INTO tbl_contact(name, email, subject, body) VALUES('$name', '$email', '$subject' ,'$body' ) ";
+        //     $insert_form = $db->insert($query);
+               
+        //         if ($insert_form) {
+        //             $msg= "<span class = 'success'> Message sent successfully! </span>";
+        //         } else {
+        //             $msg= "<span class = 'error'> Message not sent! </span>";
+        //         }
+		// }
+
+
+		$error_name		= "";
+		$error_email	= "";
+		$error_message	= "";
+		$error_invalid	= "";
+
 		if(empty($name)){
-			$error 	= "Name must not be empty! ";
-		}elseif(empty($email)){
-			$error 	= "Email must not be empty! ";
-		}elseif(empty($body)){
-			$error 	= "Message must not be empty! ";
-		}elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			$error 	= "Invalid Email!";
-		}else{
-			$msg = "Message sent successfully!";
+			$error_name	= " *Name must not be empty!";
+		}
+		elseif(empty($email)){
+			$error_email	= " *Email must not be empty!";
+		}
+		elseif(empty($body)){
+			$error_message	= " *Message must not be empty!";
+		}
+		elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+			$error_invalid	= " *Invalid Email!";
+		} 
+		else{
+			$query = "INSERT INTO tbl_contact(name, email, subject, body) VALUES('$name', '$email', '$subject' ,'$body' ) ";
+            $insert_form = $db->insert($query);
+               
+                if ($insert_form) {
+                    $msg= "<span class = 'success'> Message sent successfully! </span>";
+                } else {
+                    $msg= "<span class = 'error'> Message not sent! </span>";
+                }
 		}
 
 		}
@@ -56,11 +93,24 @@
 
 					    <form action=" " method="post">
 					    	<div>
-						    	<span><label>NAME</label></span>
+						    	<span><label>NAME</label>
+								<?php
+									if(isset($error_name)){ 		echo "<span class='error'> $error_name </span> ";
+									}
+								?>
+								</span>
 						    	<span><input type="text" name="name" class="form_input"></span>
 						    </div>
 						    <div>
-						    	<span><label>E-MAIL</label></span>
+						    	<span><label>E-MAIL</label>
+								<?php
+									if(isset($error_email)){ 		echo "<span class='error'> $error_email </span> ";
+									}
+									elseif(isset($error_invalid)){ 		echo "<span class='error'> $error_invalid </span> ";
+									}
+								?>
+							
+							</span>
 						    	<span><input type="email" name="email" class="form_input"></span>
 						    </div>
 						    <div>
@@ -68,7 +118,14 @@
 						    	<span><input type="text" name="subject"class="form_input"></span>
 						    </div>
 						    <div>
-						    	<span><label>MESSAGE</label></span>
+						    	<span><label>MESSAGE</label>
+									
+								<?php
+									if(isset($error_message)){ 		echo "<span class='error'> $error_message </span> ";
+									}
+								?>
+
+							</span>
 						    	<span><textarea name="body" class="form_input"> </textarea></span>
 						    </div>
 						   <div class="center">
