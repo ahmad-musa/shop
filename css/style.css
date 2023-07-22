@@ -415,7 +415,11 @@ input[type="number"] {
 	color: #ffffff;
 }
 
+
+
 /*** Login ***/
+
+
 .register_account h3,
 .login_panel h3 {
 	font-size: 22px;
@@ -441,6 +445,7 @@ input[type="number"] {
 	outline: none;
 	margin: 5px 0;
 	width: 340px;
+	margin-right: 3px;
 }
 
 .register_account form input:focus{
@@ -530,8 +535,8 @@ p.note {
 	line-height: 1.6em;
 }
 
-.buttons button,
-.search button.grey {
+button,
+.grey {
 	padding: 10px 15px;
 	font-size: 15px;
 	font-weight: bold;
@@ -543,14 +548,10 @@ p.note {
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
-.search button {
-	padding: 12px 30px;
-}
-
-button.grey,
-.search button.grey {
+.grey {
 	border: 1px solid #303030;
 	background: #3f4040;
 	background: -moz-linear-gradient(top, #3f4040 0%, #303131 100%);
@@ -563,8 +564,7 @@ button.grey,
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
-button.grey:hover,
-.search button.grey:hover {
+.grey:hover {
 	border: 1px solid #303030;
 	background: #525252;
 	background: -moz-linear-gradient(top, #525252 0%, #454646 100%);
@@ -574,10 +574,40 @@ button.grey:hover,
 	background: -ms-linear-gradient(top, #525252 0%, #454646 100%);
 	background: linear-gradient(top, #525252 0%, #454646 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#525252', endColorstr='#454646', GradientType=0);
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
+
+.btn_login{
+	background: var(--color1);
+	color: #ffffff;
+	border: 2px solid var(--color1);
+}
+
+.btn_login:hover{
+	color: var(--color1);
+	background: #ffffff;
+	border: 2px solid var(--color1);
+	text-shadow: none;
+}
+
+.btn_reg{
+	background: var(--font-red);
+	color: #ffffff;
+	border: 2px solid var(--font-red);
+	margin-bottom: 4px;
+}
+.btn_reg:hover{
+	color: var(--font-red);
+	background: #ffffff;
+	border: 2px solid var(--font-red);
+	text-shadow: none;
+}
+
+
 /** End Login ***/
+
+
+
 .wrapper-dropdown {
 	/* Size & position */
 	float: left;

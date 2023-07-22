@@ -23,7 +23,7 @@
 				}
 			?>
 
-            <h3> Existing Customers </h3>
+            <h3> Existing Customer </h3>
             <p> Sign in with the form below. </p>
             <form action="#" method="post">
 
@@ -33,9 +33,10 @@
 
 				<p class="note">If you forgot your passoword just enter your email and click <a href="#"> here </a>
             	</p>
-            	<div class="buttons">
+
+            	<div class="buttons text_center">
                 	<div>
-                    	<button class="grey" name="login"> Sign In </button>
+                    	<button class="btn_login" name="login"> Sign In </button>
                		</div>
             	</div>
 			  </div>
@@ -57,7 +58,7 @@
 				echo $customerReg;
 			}
 			?>
-            <h3>Register New Account</h3>
+            <h3 class="text_center">Register New Account</h3>
             <form action="#" method="post">
                 <table>
                     <tbody>
@@ -99,11 +100,15 @@
                     </tbody>
                 </table>
 
-                <div class="search">
-                    <div> <button class="grey" name="register"> Create Account </button> </div>
+                <div class="text_center">
+                    <div class="search float_none">
+                        <button class="grey btn_reg" name="register"> Create Account </button>
+                    </div>
+                    <div>
+                        <p>By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.
+                        </p>
+                    </div>
                 </div>
-                <p class="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.
-                </p>
 
                 <div class="clear"></div>
             </form>

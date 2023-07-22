@@ -20,6 +20,14 @@
    text-transform: uppercase; 
 }
 
+.inline_flex{
+    display: inline-flex;
+}
+
+.float_none{
+    float: none;
+}
+
 .bold{
     font-weight: 600;
     font-style: italic;
